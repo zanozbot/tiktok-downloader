@@ -4,9 +4,9 @@
       <v-col cols="12" lg="8" offset-lg="2" xl="6" offset-xl="3">
         <h1
           class="display-1 font-weight-black mb-8 text-center"
-          :class="{'headline': $vuetify.breakpoint.smAndDown}"
-        >Your TikTok video is ready for download 😆</h1>
-        <div class="d-flex video-card" :class="{'flex-column': $vuetify.breakpoint.smAndDown}">
+          :class="{'headline': $breakpoint.is.smAndDown}"
+        >Your TikTok video is ready for download!</h1>
+        <div class="d-flex video-card" :class="{'flex-column': $breakpoint.is.smAndDown}">
           <video
             loop
             controls

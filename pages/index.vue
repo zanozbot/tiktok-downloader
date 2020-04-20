@@ -3,7 +3,7 @@
     <v-row>
       <v-col class="text-center">
         <h1
-          :class="{'display-2': $vuetify.breakpoint.mdAndUp, 'display-1': $vuetify.breakpoint.smAndDown}"
+          :class="{'display-2': $breakpoint.is.mdAndUp, 'display-1': $breakpoint.is.smAndDown}"
           class="font-weight-black mb-2"
         >TikTok Video Dowloader</h1>
         <h2 class="headline">Dowload TikTok videos on any device for free</h2>
@@ -15,7 +15,7 @@
         lg="8"
         offset-lg="2"
         class="d-flex download-field"
-        :class="{'flex-column': $vuetify.breakpoint.smAndDown}"
+        :class="{'flex-column': $breakpoint.is.smAndDown}"
       >
         <v-text-field
           v-model="url"
