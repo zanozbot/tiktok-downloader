@@ -7,7 +7,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: 'TikTok Video Downloader',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -15,7 +15,7 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', src: 'https://fonts.googleapis.com/css?family=Poppins:400;600;700' }
+      { rel: 'stylesheet', src: 'https://fonts.googleapis.com/css?family=Manrope:400;500;600;700;800' }
     ]
   },
 
@@ -57,7 +57,9 @@ module.exports = {
   ],
 
   vuetify: {
-    optionsPath: './vuetify.options.js'
+    customVariables: ['~/assets/variables.scss'],
+    optionsPath: './vuetify.options.js',
+    treeShake: true
   },
 
   /*

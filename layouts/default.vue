@@ -1,37 +1,36 @@
 <template>
   <v-app>
-    <v-app-bar elevate-on-scroll fixed app>
-      <v-img
-        class="mr-2"
-        src="https://via.placeholder.com/40"
-        :alt="title"
-        max-height="40"
-        max-width="40"
-      ></v-img>
-      <v-toolbar-title
-        v-if="$vuetify.breakpoint.mdAndUp"
-        class="headline-title font-weight-bold"
-        v-text="title"
-      ></v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        :large="$vuetify.breakpoint.mdAndUp"
-        :small="$vuetify.breakpoint.smAndDown"
-        color="primary"
-      >
-        <v-icon class="mr-1">mdi-play</v-icon>
-        <span>Watch now</span>
-      </v-btn>
+    <v-app-bar flat fixed app>
+      <nuxt-link to="/">
+        <v-img
+          to="/"
+          class="mr-3"
+          src="https://via.placeholder.com/40"
+          :alt="title"
+          max-height="40"
+          max-width="40"
+        ></v-img>
+      </nuxt-link>
     </v-app-bar>
 
     <v-content>
-      <v-container>
-        <nuxt />
-      </v-container>
+      <nuxt />
     </v-content>
 
-    <v-footer fixed app>
-      <span>{{ title }} &copy; 2020</span>
+    <v-footer class="black mt-5">
+      <v-row justify="center" no-gutters>
+        <nuxt-link
+          class="ma-2 grey--text text--lighten-4 footer-link caption"
+          to="/privacy-policy"
+        >Privacy Policy</nuxt-link>
+        <nuxt-link
+          class="ma-2 grey--text text--lighten-4 footer-link caption"
+          to="/terms-and-conditions"
+        >Terms and Conditions</nuxt-link>
+        <v-col cols="12 py-4 grey--text text--lighten-1 text-center caption">
+          <strong>{{ title }}</strong> &copy; 2020
+        </v-col>
+      </v-row>
     </v-footer>
   </v-app>
 </template>
@@ -46,12 +45,16 @@ export default {
 };
 </script>
 
-<style>
-#app {
-  font-family: "Poppins", sans-serif;
-}
+<style lang="scss" scoped>
+.footer-link {
+  text-decoration: none;
 
-.headline-title {
-  font-size: 1.8rem;
+  &:hover {
+    box-shadow: 0 2px 0 white;
+  }
+}
+header {
+  border-bottom: 1px solid #e0e0e0 !important;
+  background-color: white !important;
 }
 </style>
