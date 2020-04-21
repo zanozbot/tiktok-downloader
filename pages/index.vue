@@ -54,7 +54,9 @@ export default {
   methods: {
     download: async function() {
       this.isLoading = true;
-      const res = await this.$fireFunc.httpsCallable("downloadVideo")();
+      const res = await this.$fireFunc.httpsCallable("downloadDouyinVideo")({
+        url: "https://v.douyin.com/3vn57r/"
+      });
       this.isLoading = false;
       console.log(res);
     },
