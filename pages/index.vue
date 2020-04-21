@@ -52,8 +52,8 @@ export default {
     };
   },
   methods: {
-    download: function() {
-      console.log("Download video");
+    download: async function() {
+      this.isLoading = true;
     },
     clearUrl: function() {
       this.url = "";

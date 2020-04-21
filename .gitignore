@@ -13,3 +13,5 @@ dist
 .editorconfig
 
 package-lock.json
+
+functions/firebase-debug.log

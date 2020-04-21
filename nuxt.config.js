@@ -58,9 +58,8 @@ module.exports = {
       measurementId: "G-BK6V9Z6K13"
     },
     services: {
-      firestore: true,
-      performance: true,
-      analytics: true,
+      performance: false,
+      analytics: false,
       functions: true
     }
   },
