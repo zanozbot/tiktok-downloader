@@ -5,8 +5,7 @@ const axios = require("axios")
 const cheerio = require("cheerio")
 const userAgent = new UserAgent({ deviceCategory: 'mobile' })
 
-// onCall
-exports.downloadVideo = functions.https.onRequest(async (req, res) => {
+exports.downloadVideo = functions.https.onCall(async (clientData, context) => {
   const { data } = await axios.get(
     'https://www.tiktok.com/@deborahmilani/video/6808878154556509446',
     {
@@ -19,8 +18,7 @@ exports.downloadVideo = functions.https.onRequest(async (req, res) => {
   const videoObject = $('#videoObject').get();
 
   if (videoObject.length === 0) {
-    res.status(200).send('Not found.');
-    return;
+    return Promise.reject('video-not-found');
   }
 
   const content = JSON.parse(videoObject[0].children[0].data);
@@ -39,5 +37,5 @@ exports.downloadVideo = functions.https.onRequest(async (req, res) => {
     interactions
   }
 
-  res.status(200).send(video);
+  return Promise.resolve(video);
 });

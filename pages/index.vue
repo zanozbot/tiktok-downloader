@@ -54,6 +54,9 @@ export default {
   methods: {
     download: async function() {
       this.isLoading = true;
+      const res = await this.$fireFunc.httpsCallable("downloadVideo")();
+      this.isLoading = false;
+      console.log(res);
     },
     clearUrl: function() {
       this.url = "";

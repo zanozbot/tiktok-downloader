@@ -60,7 +60,9 @@ module.exports = {
     services: {
       performance: false,
       analytics: false,
-      functions: true
+      functions: {
+        emulatorPort: 5001
+      }
     }
   },
 
