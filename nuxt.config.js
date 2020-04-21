@@ -42,8 +42,28 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/firebase',
   ],
+
+  firebase: {
+    config: {
+      apiKey: "AIzaSyC6yl_8Acpvr39Dj3-mWuxm0Hm7RuQBdAk",
+      authDomain: "tiktok-video-downloader-free.firebaseapp.com",
+      databaseURL: "https://tiktok-video-downloader-free.firebaseio.com",
+      projectId: "tiktok-video-downloader-free",
+      storageBucket: "tiktok-video-downloader-free.appspot.com",
+      messagingSenderId: "189013497205",
+      appId: "1:189013497205:web:37800f11f50f9853e7ef3c",
+      measurementId: "G-BK6V9Z6K13"
+    },
+    services: {
+      firestore: true,
+      performance: true,
+      analytics: true,
+      functions: true
+    }
+  },
 
   /*
   ** Axios module configuration

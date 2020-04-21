@@ -11,8 +11,10 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^2.12.2",
-    "@nuxtjs/axios": "^5.9.7"
+    "@nuxtjs/axios": "^5.9.7",
+    "@nuxtjs/firebase": "^5.0.7",
+    "firebase": "^7.14.1",
+    "nuxt": "^2.12.2"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.11.0",
