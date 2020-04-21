@@ -15,3 +15,5 @@ dist
 package-lock.json
 
 functions/firebase-debug.log
+
+.firebase/hosting.ZGlzdA.cache
