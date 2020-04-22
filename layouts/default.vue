@@ -1,15 +1,8 @@
 <template>
   <v-app>
     <v-app-bar flat fixed app>
-      <nuxt-link to="/">
-        <v-img
-          to="/"
-          class="mr-3"
-          src="https://via.placeholder.com/40"
-          :alt="title"
-          max-height="40"
-          max-width="40"
-        ></v-img>
+      <nuxt-link to="/" class="d-flex logo justify-center align-center flex-grow-1">
+        <v-img to="/" src="logo.png" :alt="title" max-height="56" max-width="56"></v-img>
       </nuxt-link>
     </v-app-bar>
 
@@ -56,5 +49,25 @@ export default {
 header {
   border-bottom: 1px solid #e0e0e0 !important;
   background-color: white !important;
+}
+.logo {
+  animation: wiggle 2.5s alternate infinite;
+}
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(5deg);
+  }
+  95% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 </style>
