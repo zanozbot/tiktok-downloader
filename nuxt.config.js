@@ -7,14 +7,34 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'TikTok Video Downloader',
+    title: 'Online and Free | TikTok Video Downloader',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'og:title', property: 'og:title', content: 'TikTok Video Downloader' },
+      { hid: 'description', name: 'description', content: 'TikTok Video Downloader gives you a free online option to download TikTok videos to mp4 and answers your TikTok related questions.' },
+      { hid: 'og:description', property: 'og:description', content: 'TikTok Video Downloader gives you a free online option to download TikTok videos to mp4 and answers your TikTok related questions.' },
+      { hid: 'og:locale', property: 'og:locale', content: 'en' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:image', property: 'og:image', content: 'https://tiktokvideodownloader.online/og-image.png' },
+      { hid: 'og:image', property: 'og:image', content: 'https://tiktokvideodownloader.online/og-image.png' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'TikTok Video Downloader' },
+      // Twitter
+      {
+        hid: 'twitter:card', name: 'twitter:card', content: 'summary'
+      },
+      { hid: 'twitter:title', name: 'twitter:title', content: 'Download TikTok videos with best free online TikTok Video Downloader.' },
+      { hid: 'twitter:description', name: 'twitter:description', content: 'TikTok Video Downloader gives you a free online option to download TikTok videos to mp4 and answers your TikTok related questions.' },
+      { hid: 'twitter:image:src', name: 'twitter:image:src', content: 'https://tiktokvideodownloader.online/og-image.png' },
+      // Apple
+      { hid: 'apple-mobile-web-app-capable', name: 'apple-mobile-web-app-capable', content: 'yes' },
+      { hid: 'apple-mobile-web-app-title', name: 'apple-mobile-web-app-title', content: 'TikTok Video Downloader' },
+      { hid: 'apple-mobile-web-app-title', name: 'apple-mobile-web-app-title', content: 'TikTok Video Downloader' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'apple-touch-icon', sizes: '180x180', href: 'https://tiktokvideodownloader.online/apple-touch-icon.png' },
       { rel: 'stylesheet', src: 'https://fonts.googleapis.com/css?family=Manrope:400;500;600;700;800' }
     ]
   },

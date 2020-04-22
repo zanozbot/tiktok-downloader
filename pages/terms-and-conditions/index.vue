@@ -118,7 +118,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+  head: {
+    title: "Terms and Conditions | TikTok Video Downloader",
+    meta: [
+      {
+        hid: "og:title",
+        property: "og:title",
+        content: "Terms and Conditions | TikTok Video Downloader"
+      }
+    ]
+  }
+};
 </script>
 
 <style lang="scss" scoped>

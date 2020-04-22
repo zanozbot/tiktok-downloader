@@ -46,7 +46,7 @@
 
     <v-row>
       <v-col lg="8" offset-lg="2">
-        <h3 class="title mb-3">Examples of supported TikTok video URLs</h3>
+        <h3 class="title font-weight-bold mb-3">Examples of supported TikTok video URLs</h3>
         <v-divider class="mb-3"></v-divider>
         <p
           class="mb-0"
@@ -100,7 +100,7 @@
 
     <v-row>
       <v-col lg="8" offset-lg="2">
-        <h3 class="title mb-3">What is TikTok?</h3>
+        <h3 class="title font-weight-bold mb-3">What is TikTok?</h3>
         <v-divider class="mb-3"></v-divider>
         <p>TikTok is a Chinese video-sharing social networking service owned by ByteDance.</p>
         <p>It is used to create short dance, lip-sync, comedy, and talent videos.</p>
@@ -110,7 +110,7 @@
 
     <v-row>
       <v-col lg="8" offset-lg="2">
-        <h3 class="title mb-3">Where can I download TikTok videos?</h3>
+        <h3 class="title font-weight-bold mb-3">Where can I download TikTok videos?</h3>
         <v-divider class="mb-3"></v-divider>
         <p>You have come to the right place.</p>
         <p>
@@ -122,7 +122,9 @@
 
     <v-row>
       <v-col lg="8" offset-lg="2">
-        <h3 class="title mb-3">How to download TikTok vidoes for free on PC, iPhone or Android?</h3>
+        <h3
+          class="title font-weight-bold mb-3"
+        >How to download TikTok vidoes for free on PC, iPhone or Android?</h3>
         <v-divider class="mb-3"></v-divider>
         <v-list>
           <v-list-item>
@@ -189,7 +191,9 @@
 
     <v-row>
       <v-col lg="8" offset-lg="2">
-        <h3 class="title mb-3">How to download TikTok vidoes for free on iPhone or Android?</h3>
+        <h3
+          class="title font-weight-bold mb-3"
+        >How to download TikTok vidoes for free on iPhone or Android?</h3>
         <v-divider class="mb-3"></v-divider>
         <v-list>
           <v-list-item>
@@ -261,7 +265,7 @@
 
     <v-row>
       <v-col lg="8" offset-lg="2">
-        <h3 class="title mb-3">Am I able to download Live TikTok videos?</h3>
+        <h3 class="title font-weight-bold mb-3">Am I able to download Live TikTok videos?</h3>
         <v-divider class="mb-3"></v-divider>
         <p>
           Yes, you can download Tik Tok Live videos, but only
@@ -273,7 +277,7 @@
 
     <v-row>
       <v-col lg="8" offset-lg="2">
-        <h3 class="title mb-3">Can I download TikTok videos without watermark?</h3>
+        <h3 class="title font-weight-bold mb-3">Can I download TikTok videos without watermark?</h3>
         <v-divider class="mb-3"></v-divider>
         <p>A lot of other providers try to lure by saying you will be able to download videos without the watermark.</p>
         <p>
@@ -287,7 +291,7 @@
 
     <v-row>
       <v-col lg="8" offset-lg="2">
-        <h3 class="title mb-3">Do I need an account to download TikTok videos?</h3>
+        <h3 class="title font-weight-bold mb-3">Do I need an account to download TikTok videos?</h3>
         <v-divider class="mb-3"></v-divider>
         <p>
           You
@@ -307,7 +311,9 @@
 
     <v-row>
       <v-col lg="8" offset-lg="2">
-        <h3 class="title mb-3">Where do TikTok videos get saved after being downloaded?</h3>
+        <h3
+          class="title font-weight-bold mb-3"
+        >Where do TikTok videos get saved after being downloaded?</h3>
         <v-divider class="mb-3"></v-divider>
         <p>All of the downloaded videos will be saved into whatever folder your browset set as default folder for downloads.</p>
         <p>
@@ -319,7 +325,9 @@
 
     <v-row>
       <v-col lg="8" offset-lg="2">
-        <h3 class="title mb-3">Does TikTok Video Downloader store downloaded videos?</h3>
+        <h3
+          class="title font-weight-bold mb-3"
+        >Does TikTok Video Downloader store downloaded videos?</h3>
         <v-divider class="mb-3"></v-divider>
         <p>
           We do
@@ -332,7 +340,7 @@
 
     <v-row>
       <v-col lg="8" offset-lg="2">
-        <h3 class="title mb-3">Is downloading TikTok videos with our service free?</h3>
+        <h3 class="title font-weight-bold mb-3">Is downloading TikTok videos with our service free?</h3>
         <v-divider class="mb-3"></v-divider>
         <p>
           <strong>Yes</strong> and it will stay like that! 😎
@@ -347,7 +355,7 @@
 
     <v-row>
       <v-col lg="8" offset-lg="2">
-        <h3 class="title mb-3">About TikTok Video Downloader</h3>
+        <h3 class="title font-weight-bold mb-3">About TikTok Video Downloader</h3>
         <v-divider class="mb-3"></v-divider>
         <p>
           We created

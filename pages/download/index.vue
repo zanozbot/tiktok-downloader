@@ -43,6 +43,16 @@ import * as downlaod from "downloadjs";
 
 export default {
   middleware: "hasVideo",
+  head: {
+    title: "Download ready | TikTok Video Downloader",
+    meta: [
+      {
+        hid: "og:title",
+        property: "og:title",
+        content: "Download ready | TikTok Video Downloader"
+      }
+    ]
+  },
   computed: {
     video() {
       return this.$store.state.video;
