@@ -11,7 +11,7 @@
         <p>
           Set out below are the terms and conditions of your use of, and access to, this website.
           Please read them carefully, as they impose responsibilities on you in respect of your use of
-          <strong>TikTok Video Downloader</strong> (hereinafter referred to as "Site").
+          <strong>tiktokvideodownloader.online</strong> (hereinafter referred to as "Site").
         </p>
 
         <p>

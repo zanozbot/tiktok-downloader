@@ -12,7 +12,7 @@
         <p>
           We may collect personal identification information from Users in a variety of ways, including, but not limited to,
           when Users visit
-          <strong>tiktokvideodownloader.live</strong> (hereinafter referred to as "Site"), fill out a form,
+          <strong>tiktokvideodownloader.online</strong> (hereinafter referred to as "Site"), fill out a form,
           and in connection with other activities, services, features or resources
           we make available on this Site. Users may visit this Site anonymously. We will collect personal identification information
           from Users only if they voluntarily submit such information to us. Users can always refuse to supply personally identification

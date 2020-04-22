@@ -29,7 +29,7 @@
           placeholder="Paste TikTok video URL here"
           :disabled="isLoading"
           type="text"
-          hint="See examples below"
+          hint="See the examples below"
           persistent-hint
           @click:clear="clearUrl"
         ></v-text-field>
@@ -46,8 +46,320 @@
 
     <v-row>
       <v-col lg="8" offset-lg="2">
-        <h3 class="title mb-3">Examples of TikTok video URLs</h3>
-        <v-divider></v-divider>
+        <h3 class="title mb-3">Examples of supported TikTok video URLs</h3>
+        <v-divider class="mb-3"></v-divider>
+        <p
+          class="mb-0"
+        >Here you will find a few examples which are supported by our free TikTok Video Downloader.</p>
+        <v-list>
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon color="primary">mdi-check</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>
+                <a
+                  href="https://vt.tiktok.com/MQt5Gk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >https://vt.tiktok.com/MQt5Gk/</a>
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon color="primary">mdi-check</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>
+                <a
+                  href="https://www.tiktok.com/@samuelgrubbs/video/6744084223445044485"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >https://www.tiktok.com/@samuelgrubbs/video/6744084223445044485</a>
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon color="primary">mdi-check</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>
+                <a
+                  href="https://m.tiktok.com/v/6744084223445044485.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >https://m.tiktok.com/v/6744084223445044485.html</a>
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col lg="8" offset-lg="2">
+        <h3 class="title mb-3">What is TikTok?</h3>
+        <v-divider class="mb-3"></v-divider>
+        <p>TikTok is a Chinese video-sharing social networking service owned by ByteDance.</p>
+        <p>It is used to create short dance, lip-sync, comedy, and talent videos.</p>
+        <p>The application was merged with musical.ly in 2018 and allows users to create looping short music and lip-sync videos.</p>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col lg="8" offset-lg="2">
+        <h3 class="title mb-3">Where can I download TikTok videos?</h3>
+        <v-divider class="mb-3"></v-divider>
+        <p>You have come to the right place.</p>
+        <p>
+          <strong>TikTok Video Dowloader allows you to do just that</strong>.
+        </p>
+        <p>The following two sections explain in detail how to download TikTok videos for free on PC or mobile.</p>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col lg="8" offset-lg="2">
+        <h3 class="title mb-3">How to download TikTok vidoes for free on PC, iPhone or Android?</h3>
+        <v-divider class="mb-3"></v-divider>
+        <v-list>
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon color="primary">mdi-numeric-1-circle</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>
+                Head over to
+                <a
+                  href="https://www.tiktok.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >https://www.tiktok.com/</a>.
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon color="primary">mdi-numeric-2-circle</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>Navigate to a video you wish to download.</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon color="primary">mdi-numeric-3-circle</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>
+                Click on the copy link
+                <v-icon class="mr-1">mdi-link-variant</v-icon>button.
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon color="primary">mdi-numeric-4-circle</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>
+                Head back to
+                <strong>TikTok Video Downloader</strong>, paste the link in the
+                <span
+                  class="caption grey lighten-3 pa-2 rounded"
+                >TikTok video URL</span> field and
+                click on
+                <span>Download video</span>.
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon color="primary">mdi-numeric-5-circle</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>Wait for the video to be processed. Download. Enjoy! 👌</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col lg="8" offset-lg="2">
+        <h3 class="title mb-3">How to download TikTok vidoes for free on iPhone or Android?</h3>
+        <v-divider class="mb-3"></v-divider>
+        <v-list>
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon color="primary">mdi-numeric-1-circle</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>Open you TikTok application.</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon color="primary">mdi-numeric-2-circle</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>Find a video you wish to download.</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon color="primary">mdi-numeric-3-circle</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>
+                Click on the share
+                <v-icon class="mr-1">mdi-share</v-icon>button at the bottom right.
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon color="primary">mdi-numeric-4-circle</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>
+                A quick drawer should pop up. Click on the copy link
+                <v-icon class="mr-1">mdi-link-variant</v-icon>or copy link to clipboard
+                <v-icon class="mr-1">mdi-clipboard-multiple-outline</v-icon>button.
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon color="primary">mdi-numeric-5-circle</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>
+                Head back to
+                <strong>TikTok Video Downloader</strong>, paste the link in the
+                <span
+                  class="caption grey lighten-3 pa-2 rounded"
+                >TikTok video URL</span> field and
+                click on
+                <span>Download video</span>.
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon color="primary">mdi-numeric-6-circle</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>Wait for the video to be processed. Download. Enjoy! 👌</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col lg="8" offset-lg="2">
+        <h3 class="title mb-3">Am I able to download Live TikTok videos?</h3>
+        <v-divider class="mb-3"></v-divider>
+        <p>
+          Yes, you can download Tik Tok Live videos, but only
+          <strong>after</strong> they
+          <strong>finish streaming</strong> 🤓.
+        </p>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col lg="8" offset-lg="2">
+        <h3 class="title mb-3">Can I download TikTok videos without watermark?</h3>
+        <v-divider class="mb-3"></v-divider>
+        <p>A lot of other providers try to lure by saying you will be able to download videos without the watermark.</p>
+        <p>
+          That just
+          <strong>isn't true</strong> 🤯. TikTok put those watermark on the videos for a reason.
+        </p>
+        <p>Remember, someone else made that video content and TikTok owns it.</p>
+        <p>Without the proper attribution you are essentialy stealing someone's property.</p>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col lg="8" offset-lg="2">
+        <h3 class="title mb-3">Do I need an account to download TikTok videos?</h3>
+        <v-divider class="mb-3"></v-divider>
+        <p>
+          You
+          <strong>don't need</strong> an account to watch popular TikTok videos 🤩.
+        </p>
+        <p>
+          All you have to do is download the TikTok app or navigate to
+          <a
+            href="https://www.tiktok.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >https://www.tiktok.com/</a>.
+        </p>
+        <p>Which is more than enough to get the video link of you liking and download the video.</p>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col lg="8" offset-lg="2">
+        <h3 class="title mb-3">Where do TikTok videos get saved after being downloaded?</h3>
+        <v-divider class="mb-3"></v-divider>
+        <p>All of the downloaded videos will be saved into whatever folder your browset set as default folder for downloads.</p>
+        <p>
+          There is quite a big chance you will find them in your
+          <strong>Downloads folder</strong> 📥.
+        </p>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col lg="8" offset-lg="2">
+        <h3 class="title mb-3">Does TikTok Video Downloader store downloaded videos?</h3>
+        <v-divider class="mb-3"></v-divider>
+        <p>
+          We do
+          <strong>not</strong> store videos,
+          <strong>neither</strong> do we keep copies of them.
+        </p>
+        <p>All of the videos are hosted on and downloaded from TikTok's servers.</p>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col lg="8" offset-lg="2">
+        <h3 class="title mb-3">Is downloading TikTok videos with our service free?</h3>
+        <v-divider class="mb-3"></v-divider>
+        <p>
+          <strong>Yes</strong> and it will stay like that! 😎
+        </p>
+        <p>You might see some ads. It's how we cover the processing expenses and further development.</p>
+        <p>
+          So we kindly ask you to
+          <strong>turn off your ad blocker</strong>, if you are using one.
+        </p>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col lg="8" offset-lg="2">
+        <h3 class="title mb-3">About TikTok Video Downloader</h3>
+        <v-divider class="mb-3"></v-divider>
+        <p>
+          We created
+          <strong>TikTok Video Downloader</strong> with the intention of learning new technology.
+        </p>
+        <p>This downloader is one of the best video downloaders out there, without the nonsense other providers might feed you with.</p>
+        <p>It was designed to be used as an standalone app, so you are not required to install anything else.</p>
+        <p>As long as you are online and with a TikTok video link you are all set and ready to download.</p>
+        <p>
+          After the video link has been processed, you will be able to download the video as a
+          <strong>mp4</strong>.
+        </p>
       </v-col>
     </v-row>
   </v-container>
@@ -112,6 +424,18 @@ export default {
   .v-input__slot {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+  }
+}
+.rounded {
+  border-radius: 4px;
+}
+.v-list-item .v-list-item__title {
+  text-overflow: unset;
+  line-height: 1.8 !important;
+  white-space: normal;
+  overflow: hidden;
+  a {
+    overflow-x: auto;
   }
 }
 </style>
