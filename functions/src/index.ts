@@ -18,12 +18,13 @@ exports.downloadTikTokVideo = functions.https.onCall(async (clientData, context)
   const videoObject = await $('#videoObject').get();
 
   if (videoObject.length === 0) {
-    return Promise.resolve('video-not-found');
+    return Promise.resolve({ status: 'video-not-found' });
   }
 
   const content = JSON.parse(videoObject[0].children[0].data);
 
   const video = {
+    status: 'ok',
     name: content.creator.name,
     handle: '@' + content.creator.alternateName,
     description: content.description.substr(content.description.indexOf('.') + 1).trim(),
@@ -49,7 +50,7 @@ exports.downloadTikTokVtVideo = functions.https.onCall(async (clientData, contex
   const scripts = (await $('script').get()).filter((s: any) => s.children.length > 0 && s.children[0].data.indexOf('window.__INIT_PROPS__') >= 0);;
 
   if (scripts.length === 0) {
-    return Promise.resolve('video-not-found');
+    return Promise.resolve({ status: 'video-not-found' });
   }
 
   const content = scripts[0].children[0].data.replace('window.__INIT_PROPS__ =', '').trim();
@@ -59,6 +60,7 @@ exports.downloadTikTokVtVideo = functions.https.onCall(async (clientData, contex
 
   return Promise.resolve(
     {
+      status: 'ok',
       name: videoProps.creator.name,
       handle: '@' + videoProps.creator.alternateName,
       description,
@@ -67,7 +69,7 @@ exports.downloadTikTokVtVideo = functions.https.onCall(async (clientData, contex
   );
 });
 
-exports.downloadDouyinVideo = functions.https.onCall(async (clientData, context) => {
+exports.downloadDouyinVideo = functions.region('asia-east2').https.onCall(async (clientData, context) => {
   const { data } = await axios.get(
     clientData.url,
     {
@@ -81,10 +83,15 @@ exports.downloadDouyinVideo = functions.https.onCall(async (clientData, context)
   const description = $('p.bottom-desc').text();
   const videoUrl = $('#theVideo').attr('src');
 
+  if (!user) {
+    return Promise.resolve({ status: 'video-not-found' });
+  }
+
   return Promise.resolve(
     {
-      name: user,
-      handle: '@' + user,
+      status: 'ok',
+      name: user.substr(1),
+      handle: user,
       description,
       videoUrl
     }

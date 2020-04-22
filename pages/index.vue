@@ -23,13 +23,24 @@
           :loading="isLoading"
           clear-icon="mdi-close"
           clearable
-          label="Paste TikTok video path or URL"
+          @input="errorMessages = []"
+          :error-messages="errorMessages"
+          label="TikTok video URL"
+          placeholder="Paste TikTok video URL here"
+          :disabled="isLoading"
           type="text"
           hint="See examples below"
           persistent-hint
           @click:clear="clearUrl"
         ></v-text-field>
-        <v-btn @click="download" color="primary" height="56px" large>Download video</v-btn>
+        <v-btn
+          @click="download"
+          :loading="isLoading"
+          :disabled="isLoading"
+          color="primary"
+          height="56px"
+          large
+        >Download video</v-btn>
       </v-col>
     </v-row>
 
@@ -48,20 +59,45 @@ export default {
   data() {
     return {
       url: "",
-      isLoading: false
+      isLoading: false,
+      errorMessages: []
     };
   },
   methods: {
     download: async function() {
+      const vt = this.isTikTokVtVideo(this.url);
+      const normal = this.isTikTokVideo(this.url);
+
+      if (!vt && !normal) {
+        this.errorMessages.push("The given video URL is not valid.");
+        return;
+      }
+
       this.isLoading = true;
-      const res = await this.$fireFunc.httpsCallable("downloadDouyinVideo")({
-        url: "https://v.douyin.com/3vn57r/"
+      const { data } = await this.$fireFunc.httpsCallable(
+        vt ? "downloadTikTokVtVideo" : "downloadTikTokVideo"
+      )({
+        url: this.url
       });
-      this.isLoading = false;
-      console.log(res);
+
+      if (data.status === "ok") {
+        this.$store.commit("addVideo", data);
+        this.$router.push({ path: "/download" });
+      } else {
+        this.isLoading = false;
+        this.errorMessages.push("We couldn't find any video on the given URL.");
+      }
     },
     clearUrl: function() {
       this.url = "";
+    },
+    isTikTokVideo: function(url) {
+      return /https:\/\/(m|w{3})\.tiktok.com\/(v\/|@.*\/video\/).*(\.html)*/.test(
+        url
+      );
+    },
+    isTikTokVtVideo: function(url) {
+      return /https:\/\/vt.tiktok.com\/.*\//.test(url);
     }
   }
 };
