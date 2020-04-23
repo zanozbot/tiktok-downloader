@@ -60,7 +60,14 @@ export default {
   },
   methods: {
     downloadVideo: function() {
-      downlaod(this.video.videoUrl);
+      try {
+        downlaod(this.video.videoUrl);
+        this.$fireAnalyticsObj.logEvent("video_downloaded");
+      } catch (error) {
+        this.$fireAnalyticsObj.logEvent("video_download_error", {
+          error: error.toString()
+        });
+      }
     }
   }
 };

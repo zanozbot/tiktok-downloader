@@ -397,6 +397,7 @@ export default {
 
       if (!vt && !normal) {
         this.errorMessages.push("The given video URL is not valid.");
+        this.$fireAnalyticsObj.logEvent("invalid_url");
         return;
       }
 
@@ -410,9 +411,11 @@ export default {
       if (data.status === "ok") {
         this.$store.commit("addVideo", data);
         this.$router.push({ path: "/download" });
+        this.$fireAnalyticsObj.logEvent("video_found");
       } else {
         this.isLoading = false;
         this.errorMessages.push("We couldn't find any video on the given URL.");
+        this.$fireAnalyticsObj.logEvent("video_not_found");
       }
     },
     clearUrl: function() {
