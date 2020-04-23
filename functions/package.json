@@ -18,8 +18,7 @@
     "axios": "^0.19.2",
     "cheerio": "^1.0.0-rc.3",
     "firebase-admin": "^8.9.0",
-    "firebase-functions": "^3.3.0",
-    "user-agents": "^1.0.559"
+    "firebase-functions": "^3.3.0"
   },
   "devDependencies": {
     "tslint": "^5.12.0",

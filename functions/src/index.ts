@@ -1,21 +1,28 @@
 import * as functions from 'firebase-functions';
-import UserAgent from 'user-agents';
 
 const axios = require("axios")
 const cheerio = require("cheerio")
-const userAgent = new UserAgent({ deviceCategory: 'mobile' })
+
+const userAgents = [
+  'Mozilla/5.0 (Linux; Android 8.0.0; SM-G960F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36',
+  'Mozilla/5.0 (Linux; Android 7.0; SM-G892A Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/60.0.3112.107 Mobile Safari/537.36',
+  'Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36',
+  'Mozilla/5.0 (Linux; Android 6.0.1; SM-G935S Build/MMB29K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Mobile Safari/537.36',
+  'Mozilla/5.0 (Linux; Android 6.0.1; SM-G920V Build/MMB29K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.98 Mobile Safari/537.36',
+  'Mozilla/5.0 (Linux; Android 7.1.2; AFTMM Build/NS6265; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.110 Mobile Safari/537.36'
+];
 
 exports.downloadTikTokVideo = functions.https.onCall(async (clientData, context) => {
   const { data } = await axios.get(
     clientData.url,
     {
-      headers: { 'User-Agent': userAgent.data.userAgent }
+      headers: { 'User-Agent': userAgents[Math.floor(Math.random() * userAgents.length)] }
     }
   );
 
   const $ = await cheerio.load(data);
 
-  const content = $('#__NEXT_DATA__').get();
+  const content = await $('#__NEXT_DATA__').get();
 
   const json = JSON.parse(content[0].children[0].data);
 
@@ -45,14 +52,16 @@ exports.downloadTikTokMobileVideo = functions.https.onCall(async (clientData, co
   const { data } = await axios.get(
     clientData.url,
     {
-      headers: { 'User-Agent': userAgent.data.userAgent }
+      headers: { 'User-Agent': userAgents[Math.floor(Math.random() * userAgents.length)] }
     }
   );
 
   const $ = await cheerio.load(data);
 
-  const scripts = $('script').get().filter((s: any) => {
-    if (s.children.length > 0) {
+  const scripts = await $('script').get();
+
+  const filteredScripts = scripts.filter((s: any) => {
+    if (s && s.children.length > 0) {
       const d = s.children[0].data;
       if (d.indexOf('window.__INIT_PROPS__') >= 0) {
         return true;
@@ -65,7 +74,7 @@ exports.downloadTikTokMobileVideo = functions.https.onCall(async (clientData, co
     return Promise.resolve({ status: 'video-not-found' });
   }
 
-  const content = scripts[0].children[0].data.replace('window.__INIT_PROPS__ =', '').trim();
+  const content = filteredScripts[0].children[0].data.replace('window.__INIT_PROPS__ =', '').trim();
 
   return Promise.resolve(content)
     .then(c => JSON.parse(c))
