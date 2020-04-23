@@ -12,8 +12,8 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'og:title', property: 'og:title', content: 'TikTok Video Downloader' },
-      { hid: 'description', name: 'description', content: 'TikTok Video Downloader gives you a free online option to download TikTok videos to mp4 and answers your TikTok related questions.' },
-      { hid: 'og:description', property: 'og:description', content: 'TikTok Video Downloader gives you a free online option to download TikTok videos to mp4 and answers your TikTok related questions.' },
+      { hid: 'description', name: 'description', content: 'TikTok Video Downloader is a completely free online option to download TikTok videos and save them as mp4.' },
+      { hid: 'og:description', property: 'og:description', content: 'TikTok Video Downloader is a completely free online option to download TikTok videos and save them as mp4.' },
       { hid: 'og:locale', property: 'og:locale', content: 'en' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:image', property: 'og:image', content: 'https://tiktokvideodownloader.online/og-image.png' },
@@ -21,8 +21,8 @@ module.exports = {
       // Twitter
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
       { hid: 'twitter:size', name: 'twitter:site', content: 'TikTok Video Downloader' },
-      { hid: 'twitter:title', name: 'twitter:title', content: 'Download TikTok videos with best free online TikTok Video Downloader.' },
-      { hid: 'twitter:description', name: 'twitter:description', content: 'TikTok Video Downloader gives you a free online option to download TikTok videos to mp4 and answers your TikTok related questions.' },
+      { hid: 'twitter:title', name: 'twitter:title', content: 'Download TikTok videos online with TikTok Video Downloader. Completely free.' },
+      { hid: 'twitter:description', name: 'twitter:description', content: 'TikTok Video Downloader is a completely free online option to download TikTok videos and save them as mp4.' },
       { hid: 'twitter:image', name: 'twitter:image:src', content: 'https://tiktokvideodownloader.online/og-image.png' },
       // Apple
       { hid: 'apple-mobile-web-app-capable', name: 'apple-mobile-web-app-capable', content: 'yes' },
@@ -33,7 +33,7 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'apple-touch-icon', sizes: '180x180', href: 'https://tiktokvideodownloader.online/apple-touch-icon.png' },
-      { rel: 'stylesheet', src: 'https://fonts.googleapis.com/css?family=Manrope:400;500;600;700;800' }
+      { rel: 'stylesheet', src: 'https://fonts.googleapis.com/css?family=Roboto:400;500;700;900' }
     ]
   },
 
@@ -98,7 +98,6 @@ module.exports = {
   ],
 
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
     optionsPath: './vuetify.options.js',
     treeShake: true
   },

@@ -5,8 +5,8 @@
         <h1
           :class="{'display-2': $breakpoint.is.mdAndUp, 'display-1': $breakpoint.is.smAndDown}"
           class="font-weight-black mb-2"
-        >TikTok Video Dowloader</h1>
-        <h2 class="headline">Dowload TikTok videos on any device for free</h2>
+        >TikTok Video Downloader</h1>
+        <h2 class="headline">Download TikTok videos online. On any device. Completely free.</h2>
       </v-col>
     </v-row>
 
@@ -114,7 +114,7 @@
         <v-divider class="mb-3"></v-divider>
         <p>You have come to the right place.</p>
         <p>
-          <strong>TikTok Video Dowloader allows you to do just that</strong>.
+          <strong>TikTok Video Downloader allows you to do just that</strong>.
         </p>
         <p>The following two sections explain in detail how to download TikTok videos for free on PC or mobile.</p>
       </v-col>
@@ -122,9 +122,7 @@
 
     <v-row>
       <v-col lg="8" offset-lg="2">
-        <h3
-          class="title font-weight-bold mb-3"
-        >How to download TikTok vidoes for free on PC, iPhone or Android?</h3>
+        <h3 class="title font-weight-bold mb-3">How to download TikTok videos for free on PC?</h3>
         <v-divider class="mb-3"></v-divider>
         <v-list>
           <v-list-item>
@@ -156,7 +154,7 @@
             </v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title>
-                Click on the copy link
+                Click on the Copy link
                 <v-icon class="mr-1">mdi-link-variant</v-icon>button.
               </v-list-item-title>
             </v-list-item-content>
@@ -172,8 +170,7 @@
                 <span
                   class="caption grey lighten-3 pa-2 rounded"
                 >TikTok video URL</span> field and
-                click on
-                <span>Download video</span>.
+                click on Download video button.
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
@@ -193,7 +190,7 @@
       <v-col lg="8" offset-lg="2">
         <h3
           class="title font-weight-bold mb-3"
-        >How to download TikTok vidoes for free on iPhone or Android?</h3>
+        >How to download TikTok videos for free on iPhone or Android?</h3>
         <v-divider class="mb-3"></v-divider>
         <v-list>
           <v-list-item>
@@ -201,7 +198,7 @@
               <v-icon color="primary">mdi-numeric-1-circle</v-icon>
             </v-list-item-icon>
             <v-list-item-content>
-              <v-list-item-title>Open you TikTok application.</v-list-item-title>
+              <v-list-item-title>Open your TikTok application.</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
           <v-list-item>
@@ -218,7 +215,7 @@
             </v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title>
-                Click on the share
+                Click on the Share
                 <v-icon class="mr-1">mdi-share</v-icon>button at the bottom right.
               </v-list-item-title>
             </v-list-item-content>
@@ -229,8 +226,8 @@
             </v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title>
-                A quick drawer should pop up. Click on the copy link
-                <v-icon class="mr-1">mdi-link-variant</v-icon>or copy link to clipboard
+                A quick drawer should pop up. Click on the Copy link
+                <v-icon class="mr-1">mdi-link-variant</v-icon>or Copy link to clipboard
                 <v-icon class="mr-1">mdi-clipboard-multiple-outline</v-icon>button.
               </v-list-item-title>
             </v-list-item-content>
@@ -277,15 +274,15 @@
 
     <v-row>
       <v-col lg="8" offset-lg="2">
-        <h3 class="title font-weight-bold mb-3">Can I download TikTok videos without watermark?</h3>
+        <h3 class="title font-weight-bold mb-3">Can I download TikTok videos without a watermark?</h3>
         <v-divider class="mb-3"></v-divider>
         <p>A lot of other providers try to lure by saying you will be able to download videos without the watermark.</p>
         <p>
           That just
-          <strong>isn't true</strong> 🤯. TikTok put those watermark on the videos for a reason.
+          <strong>isn't true</strong> 🤯. TikTok put the watermark on the videos for a reason.
         </p>
         <p>Remember, someone else made that video content and TikTok owns it.</p>
-        <p>Without the proper attribution you are essentialy stealing someone's property.</p>
+        <p>Without proper attribution, you are essentially stealing someone's property.</p>
       </v-col>
     </v-row>
 
@@ -315,7 +312,7 @@
           class="title font-weight-bold mb-3"
         >Where do TikTok videos get saved after being downloaded?</h3>
         <v-divider class="mb-3"></v-divider>
-        <p>All of the downloaded videos will be saved into whatever folder your browset set as default folder for downloads.</p>
+        <p>All of the downloaded videos will be saved into whatever folder your browser set as the default folder for downloads.</p>
         <p>
           There is quite a big chance you will find them in your
           <strong>Downloads folder</strong> 📥.
@@ -327,7 +324,7 @@
       <v-col lg="8" offset-lg="2">
         <h3
           class="title font-weight-bold mb-3"
-        >Does TikTok Video Downloader store downloaded videos?</h3>
+        >Is TikTok Video Downloader storing downloaded videos?</h3>
         <v-divider class="mb-3"></v-divider>
         <p>
           We do
@@ -343,12 +340,12 @@
         <h3 class="title font-weight-bold mb-3">Is downloading TikTok videos with our service free?</h3>
         <v-divider class="mb-3"></v-divider>
         <p>
-          <strong>Yes</strong> and it will stay like that! 😎
+          <strong>Yes</strong>, and it will stay like that! 😎
         </p>
         <p>You might see some ads. It's how we cover the processing expenses and further development.</p>
         <p>
           So we kindly ask you to
-          <strong>turn off your ad blocker</strong>, if you are using one.
+          <strong>turn off your adblocker</strong>, if you are using one.
         </p>
       </v-col>
     </v-row>

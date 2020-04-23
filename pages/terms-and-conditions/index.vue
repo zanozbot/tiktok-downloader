@@ -16,7 +16,7 @@
 
         <p>
           By accessing this Site, you are agreeing to be bound by these Terms and Conditions of Use,
-          all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws.
+          all applicable laws, and regulations, and agree that you are responsible for compliance with any applicable local laws.
           If you do not agree with any of these terms, you are prohibited from using or accessing this Site. The materials contained
           in this Site are protected by applicable copyright and trademark law.
         </p>
@@ -31,7 +31,7 @@
           (information or software) on
           Site's website for personal,
           non-commercial transitory viewing only. This is the grant of a license, not a transfer of
-          title, and under this license you may not:
+          title, and under this license, you may not:
         </p>
 
         <ul class="mb-5">
@@ -52,7 +52,7 @@
       <v-col cols="12" lg="6" offset-lg="3">
         <h2 class="headline mb-3">Disclaimer</h2>
         <p>
-          The materials on the Site's are provided "as is".
+          The materials on the Site are provided "as is".
           The Site makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties, including without limitation, implied
           warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual
           property or other violation of rights. Further,
@@ -110,7 +110,7 @@
         <p>
           The Site may revise these terms of use for its web site at any time without notice.
           By using this web site you are agreeing to be bound by the then current version of these Terms and Conditions of Use.
-          General Terms and Conditions applicable to Use of a Web Site.
+          General Terms and Conditions are applicable to Use of a Web Site.
         </p>
       </v-col>
     </v-row>
