@@ -54,16 +54,13 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~plugins/breakpoints.js',
-    '~/plugins/jsonld'
+    '~plugins/breakpoints.js'
   ],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios',
     '@nuxtjs/firebase',
     '@nuxtjs/pwa'
   ],
@@ -120,14 +117,12 @@ module.exports = {
   },
 
   buildModules: [
-    // Simple usage
     '@nuxtjs/vuetify'
   ],
 
   vuetify: {
     defaultAssets: false,
-    optionsPath: './vuetify.options.js',
-    treeShake: true
+    optionsPath: './vuetify.options.js'
   },
 
   /*
