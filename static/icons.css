@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'tiktok';
+  src:  url('fonts/tiktok.eot?6s6xcp');
+  src:  url('fonts/tiktok.eot?6s6xcp#iefix') format('embedded-opentype'),
+    url('fonts/tiktok.ttf?6s6xcp') format('truetype'),
+    url('fonts/tiktok.woff?6s6xcp') format('woff'),
+    url('fonts/tiktok.svg?6s6xcp#tiktok') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'tiktok' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-numeric-6-circle:before {
+  content: "\e901";
+}
+.icon-numeric-5-circle:before {
+  content: "\e902";
+}
+.icon-numeric-4-circle:before {
+  content: "\e903";
+}
+.icon-numeric-3-circle:before {
+  content: "\e904";
+}
+.icon-numeric-2-circle:before {
+  content: "\e905";
+}
+.icon-numeric-1-circle:before {
+  content: "\e906";
+}
+.icon-check-circle:before {
+  content: "\e907";
+}
+.icon-clipboard:before {
+  content: "\e92d";
+}
+.icon-download:before {
+  content: "\e9c7";
+}
+.icon-link:before {
+  content: "\e9cb";
+}

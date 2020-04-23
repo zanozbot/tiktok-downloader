@@ -54,7 +54,7 @@
         <v-list>
           <v-list-item>
             <v-list-item-icon>
-              <v-icon color="primary">mdi-check</v-icon>
+              <v-icon color="primary">icon-check-circle</v-icon>
             </v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title>
@@ -68,7 +68,7 @@
           </v-list-item>
           <v-list-item>
             <v-list-item-icon>
-              <v-icon color="primary">mdi-check</v-icon>
+              <v-icon color="primary">icon-check-circle</v-icon>
             </v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title>
@@ -82,7 +82,7 @@
           </v-list-item>
           <v-list-item>
             <v-list-item-icon>
-              <v-icon color="primary">mdi-check</v-icon>
+              <v-icon color="primary">icon-check-circle</v-icon>
             </v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title>
@@ -127,7 +127,7 @@
         <v-list>
           <v-list-item>
             <v-list-item-icon>
-              <v-icon color="primary">mdi-numeric-1-circle</v-icon>
+              <v-icon color="primary">icon-numeric-1-circle</v-icon>
             </v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title>
@@ -142,7 +142,7 @@
           </v-list-item>
           <v-list-item>
             <v-list-item-icon>
-              <v-icon color="primary">mdi-numeric-2-circle</v-icon>
+              <v-icon color="primary">icon-numeric-2-circle</v-icon>
             </v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title>Navigate to a video you wish to download.</v-list-item-title>
@@ -150,18 +150,18 @@
           </v-list-item>
           <v-list-item>
             <v-list-item-icon>
-              <v-icon color="primary">mdi-numeric-3-circle</v-icon>
+              <v-icon color="primary">icon-numeric-3-circle</v-icon>
             </v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title>
                 Click on the Copy link
-                <v-icon class="mr-1">mdi-link-variant</v-icon>button.
+                <v-icon class="mr-1">icon-link-variant</v-icon>button.
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
           <v-list-item>
             <v-list-item-icon>
-              <v-icon color="primary">mdi-numeric-4-circle</v-icon>
+              <v-icon color="primary">icon-numeric-4-circle</v-icon>
             </v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title>
@@ -176,7 +176,7 @@
           </v-list-item>
           <v-list-item>
             <v-list-item-icon>
-              <v-icon color="primary">mdi-numeric-5-circle</v-icon>
+              <v-icon color="primary">icon-numeric-5-circle</v-icon>
             </v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title>Wait for the video to be processed. Download. Enjoy! 👌</v-list-item-title>
@@ -195,7 +195,7 @@
         <v-list>
           <v-list-item>
             <v-list-item-icon>
-              <v-icon color="primary">mdi-numeric-1-circle</v-icon>
+              <v-icon color="primary">icon-numeric-1-circle</v-icon>
             </v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title>Open your TikTok application.</v-list-item-title>
@@ -203,7 +203,7 @@
           </v-list-item>
           <v-list-item>
             <v-list-item-icon>
-              <v-icon color="primary">mdi-numeric-2-circle</v-icon>
+              <v-icon color="primary">icon-numeric-2-circle</v-icon>
             </v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title>Find a video you wish to download.</v-list-item-title>
@@ -211,30 +211,30 @@
           </v-list-item>
           <v-list-item>
             <v-list-item-icon>
-              <v-icon color="primary">mdi-numeric-3-circle</v-icon>
+              <v-icon color="primary">icon-numeric-3-circle</v-icon>
             </v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title>
                 Click on the Share
-                <v-icon class="mr-1">mdi-share</v-icon>button at the bottom right.
+                <v-icon class="mr-1">icon-share</v-icon>button at the bottom right.
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
           <v-list-item>
             <v-list-item-icon>
-              <v-icon color="primary">mdi-numeric-4-circle</v-icon>
+              <v-icon color="primary">icon-numeric-4-circle</v-icon>
             </v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title>
                 A quick drawer should pop up. Click on the Copy link
-                <v-icon class="mr-1">mdi-link-variant</v-icon>or Copy link to clipboard
-                <v-icon class="mr-1">mdi-clipboard-multiple-outline</v-icon>button.
+                <v-icon class="mr-1">icon-link</v-icon>or Copy link to clipboard
+                <v-icon class="mr-1">icon-clipboard</v-icon>button.
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
           <v-list-item>
             <v-list-item-icon>
-              <v-icon color="primary">mdi-numeric-5-circle</v-icon>
+              <v-icon color="primary">icon-numeric-5-circle</v-icon>
             </v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title>
@@ -243,14 +243,13 @@
                 <span
                   class="caption grey lighten-3 pa-2 rounded"
                 >TikTok video URL</span> field and
-                click on
-                <span>Download video</span>.
+                click on Download video button.
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
           <v-list-item>
             <v-list-item-icon>
-              <v-icon color="primary">mdi-numeric-6-circle</v-icon>
+              <v-icon color="primary">icon-numeric-6-circle</v-icon>
             </v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title>Wait for the video to be processed. Download. Enjoy! 👌</v-list-item-title>

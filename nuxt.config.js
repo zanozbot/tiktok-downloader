@@ -32,7 +32,9 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'apple-touch-icon', sizes: '180x180', href: 'https://tiktokvideodownloader.online/apple-touch-icon.png' }
+      { rel: 'apple-touch-icon', sizes: '180x180', href: 'https://tiktokvideodownloader.online/apple-touch-icon.png' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap' },
+      { rel: 'stylesheet', href: '/icons.css' },
     ]
   },
 
@@ -70,12 +72,6 @@ module.exports = {
     runtimeCaching: [
       {
         urlPattern: 'https://fonts.googleapis.com/*',
-        handler: 'cacheFirst',
-        method: 'GET',
-        strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
-      },
-      {
-        urlPattern: 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons*',
         handler: 'cacheFirst',
         method: 'GET',
         strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
@@ -119,6 +115,10 @@ module.exports = {
   ],
 
   vuetify: {
+    defaultAssets: {
+      font: false,
+      icons: 'icon'
+    },
     optionsPath: './vuetify.options.js',
     treeShake: true
   },

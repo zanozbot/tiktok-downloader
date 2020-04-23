@@ -24,7 +24,7 @@
             <div class="flex-grow-1 mb-5">{{ video.description }}</div>
 
             <v-btn @click="downloadVideo" color="primary" height="56px" large>
-              <v-icon class="mr-3">mdi-download</v-icon>
+              <v-icon class="mr-3">icon-download</v-icon>
               <span>Download video</span>
             </v-btn>
 
