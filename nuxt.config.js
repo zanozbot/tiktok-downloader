@@ -109,16 +109,23 @@ module.exports = {
     }
   },
 
+  performance: {
+    preload: true
+  },
+  analytics: {
+    preload: true
+  },
+  functions: {
+    preload: true
+  },
+
   buildModules: [
     // Simple usage
     '@nuxtjs/vuetify'
   ],
 
   vuetify: {
-    defaultAssets: {
-      font: false,
-      icons: 'icon'
-    },
+    defaultAssets: false,
     optionsPath: './vuetify.options.js',
     treeShake: true
   },
