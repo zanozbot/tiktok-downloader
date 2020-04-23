@@ -15,27 +15,33 @@ exports.downloadTikTokVideo = functions.https.onCall(async (clientData, context)
 
   const $ = await cheerio.load(data);
 
-  const videoObject = await $('#videoObject').get();
+  const content = await $('#__NEXT_DATA__').get();
 
-  if (videoObject.length === 0) {
+  const json = JSON.parse(content[0].children[0].data);
+
+  const videoUrl = json.props.pageProps.videoData.itemInfos.video.urls[0];
+
+  if (!videoUrl) {
     return Promise.resolve({ status: 'video-not-found' });
   }
 
-  const content = JSON.parse(videoObject[0].children[0].data);
+  const name = json.props.pageProps.videoData.authorInfos.uniqueId;
+  const handle = '@' + json.props.pageProps.videoData.authorInfos.nickName;
+  const description = json.props.pageProps.videoData.itemInfos.text;
 
   const video = {
     status: 'ok',
-    name: content.creator.name,
-    handle: '@' + content.creator.alternateName,
-    description: content.description.substr(content.description.indexOf('.') + 1).trim(),
-    videoUrl: content.contentUrl
+    name,
+    handle,
+    description,
+    videoUrl
   }
 
   return Promise.resolve(video);
 });
 
 
-exports.downloadTikTokVtVideo = functions.https.onCall(async (clientData, context) => {
+exports.downloadTikTokMobileVideo = functions.https.onCall(async (clientData, context) => {
   const { data } = await axios.get(
     clientData.url,
     {
@@ -44,8 +50,6 @@ exports.downloadTikTokVtVideo = functions.https.onCall(async (clientData, contex
   );
 
   const $ = await cheerio.load(data);
-
-  const description = $('meta[property="og:description"]').attr('content');
 
   const scripts = (await $('script').get()).filter((s: any) => s.children.length > 0 && s.children[0].data.indexOf('window.__INIT_PROPS__') >= 0);;
 
@@ -56,15 +60,25 @@ exports.downloadTikTokVtVideo = functions.https.onCall(async (clientData, contex
   const content = scripts[0].children[0].data.replace('window.__INIT_PROPS__ =', '').trim();
 
   const json = JSON.parse(content);
-  const videoProps = json['/i18n/share/video/:id'].videoObjectPageProps.videoProps;
+
+  console.log(json);
+
+  const videoData = json[Object.keys(json)[0]].videoData;
+
+  console.log(videoData);
+
+  const videoUrl = videoData.itemInfos.video.urls[0];
+  const description = videoData.text;
+  const name = videoData.authorInfos.nickName;
+  const handle = '@' + videoData.authorInfos.uniqueId;
 
   return Promise.resolve(
     {
       status: 'ok',
-      name: videoProps.creator.name,
-      handle: '@' + videoProps.creator.alternateName,
+      name,
+      handle,
       description,
-      videoUrl: videoProps.contentUrl
+      videoUrl
     }
   );
 });
