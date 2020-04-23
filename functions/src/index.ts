@@ -15,7 +15,7 @@ exports.downloadTikTokVideo = functions.https.onCall(async (clientData, context)
 
   const $ = await cheerio.load(data);
 
-  const content = await $('#__NEXT_DATA__').get();
+  const content = $('#__NEXT_DATA__').get();
 
   const json = JSON.parse(content[0].children[0].data);
 
@@ -51,7 +51,15 @@ exports.downloadTikTokMobileVideo = functions.https.onCall(async (clientData, co
 
   const $ = await cheerio.load(data);
 
-  const scripts = (await $('script').get()).filter((s: any) => s.children.length > 0 && s.children[0].data.indexOf('window.__INIT_PROPS__') >= 0);;
+  const scripts = $('script').get().filter((s: any) => {
+    if (s.children.length > 0) {
+      const d = s.children[0].data;
+      if (d.indexOf('window.__INIT_PROPS__') >= 0) {
+        return true;
+      }
+    }
+    return false;
+  });
 
   if (scripts.length === 0) {
     return Promise.resolve({ status: 'video-not-found' });
@@ -59,28 +67,26 @@ exports.downloadTikTokMobileVideo = functions.https.onCall(async (clientData, co
 
   const content = scripts[0].children[0].data.replace('window.__INIT_PROPS__ =', '').trim();
 
-  const json = JSON.parse(content);
+  return Promise.resolve(content)
+    .then(c => JSON.parse(c))
+    .then(json => {
+      const videoData = json[Object.keys(json)[0]].videoData;
 
-  console.log(json);
+      const videoUrl = videoData.itemInfos.video.urls[0];
+      const description = videoData.itemInfos.text;
+      const name = videoData.authorInfos.nickName;
+      const handle = '@' + videoData.authorInfos.uniqueId;
 
-  const videoData = json[Object.keys(json)[0]].videoData;
-
-  console.log(videoData);
-
-  const videoUrl = videoData.itemInfos.video.urls[0];
-  const description = videoData.text;
-  const name = videoData.authorInfos.nickName;
-  const handle = '@' + videoData.authorInfos.uniqueId;
-
-  return Promise.resolve(
-    {
-      status: 'ok',
-      name,
-      handle,
-      description,
-      videoUrl
-    }
-  );
+      return Promise.resolve(
+        {
+          status: 'ok',
+          name,
+          handle,
+          description,
+          videoUrl
+        }
+      );
+    });
 });
 
 // exports.downloadDouyinVideo = functions.region('asia-east2').https.onCall(async (clientData, context) => {
