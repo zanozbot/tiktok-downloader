@@ -391,10 +391,31 @@ export default {
       }
 
       this.isLoading = true;
+
+      let url = this.url;
+
+      if (mobile) {
+        const { data } = await this.$fireFunc.httpsCallable(
+          "downloadTikTokMobileVideo"
+        )({
+          url
+        });
+        console.log(data);
+        if (data.status === "ok") {
+          url = data.url;
+        } else {
+          this.errorMessages.push(
+            "We couldn't find any video on the given URL."
+          );
+          this.$fireAnalytics.logEvent("video_not_found");
+          return;
+        }
+      }
+
       const { data } = await this.$fireFunc.httpsCallable(
-        mobile ? "downloadTikTokMobileVideo" : "downloadTikTokVideo"
+        "downloadTikTokVideo"
       )({
-        url: this.url
+        url
       });
 
       if (data.status === "ok") {

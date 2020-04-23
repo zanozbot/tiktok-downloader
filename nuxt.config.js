@@ -101,7 +101,9 @@ module.exports = {
     services: {
       performance: true,
       analytics: true,
-      functions: true
+      functions: {
+        emulatorPort: process.env.NODE_ENV !== 'production' ? 5001 : null
+      }
     }
   },
 
