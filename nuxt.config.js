@@ -117,7 +117,7 @@ module.exports = {
   },
 
   buildModules: [
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
   ],
 
   vuetify: {
@@ -132,6 +132,7 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
+    extractCSS: true,
     extend(config, ctx) {
 
     }
