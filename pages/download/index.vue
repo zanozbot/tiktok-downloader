@@ -62,9 +62,9 @@ export default {
     downloadVideo: function() {
       try {
         downlaod(this.video.videoUrl);
-        this.$fireAnalyticsObj.logEvent("video_downloaded");
+        this.$fireAnalytics.logEvent("video_downloaded");
       } catch (error) {
-        this.$fireAnalyticsObj.logEvent("video_download_error", {
+        this.$fireAnalytics.logEvent("video_download_error", {
           error: error.toString()
         });
       }

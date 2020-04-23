@@ -33,8 +33,7 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'apple-touch-icon', sizes: '180x180', href: 'https://tiktokvideodownloader.online/apple-touch-icon.png' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap' },
-      { rel: 'stylesheet', href: '/icons.css' },
+      { rel: 'preload', href: '/fonts.css', as: 'style' },
     ]
   },
 
