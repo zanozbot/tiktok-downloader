@@ -11,7 +11,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'og:title', property: 'og:title', content: 'TikTok Video Downloader' },
+      { hid: 'og:title', property: 'og:title', content: 'Online and Free | TikTok Video Downloader' },
       { hid: 'description', name: 'description', content: 'TikTok Video Downloader is a completely free online option to download TikTok videos and save them as mp4.' },
       { hid: 'og:description', property: 'og:description', content: 'TikTok Video Downloader is a completely free online option to download TikTok videos and save them as mp4.' },
       { hid: 'og:locale', property: 'og:locale', content: 'en' },
@@ -53,7 +53,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~plugins/breakpoints.js'
+    '~plugins/breakpoints.js',
+    '~/plugins/jsonld'
   ],
 
   /*

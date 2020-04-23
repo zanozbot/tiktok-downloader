@@ -380,6 +380,16 @@ export default {
       errorMessages: []
     };
   },
+  jsonld() {
+    return {
+      "@context": "http://schema.org",
+      "@type": "WebPage",
+      name: "TikTok Video Downloader",
+      url: "https://tiktokdownloader.online",
+      description:
+        "TikTok Video Downloader is a completely free online option to download TikTok videos and save them as mp4."
+    };
+  },
   methods: {
     download: async function() {
       const vt = this.isTikTokVtVideo(this.url);
