@@ -23,7 +23,7 @@ module.exports = {
       { hid: 'twitter:size', name: 'twitter:site', content: 'TikTok Video Downloader' },
       { hid: 'twitter:title', name: 'twitter:title', content: 'Download TikTok videos online with TikTok Video Downloader. Completely free.' },
       { hid: 'twitter:description', name: 'twitter:description', content: 'TikTok Video Downloader is a completely free online option to download TikTok videos and save them as mp4.' },
-      { hid: 'twitter:image', name: 'twitter:image:src', content: 'https://tiktokvideodownloader.online/og-image.png' },
+      { hid: 'twitter:image', name: 'twitter:image:src', content: 'https://tiktokvideodownloader.online/twitter-image.png' },
       // Apple
       { hid: 'apple-mobile-web-app-capable', name: 'apple-mobile-web-app-capable', content: 'yes' },
       { hid: 'apple-mobile-web-app-title', name: 'apple-mobile-web-app-title', content: 'TikTok Video Downloader' },
