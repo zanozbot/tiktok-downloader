@@ -69,31 +69,31 @@ exports.downloadTikTokVtVideo = functions.https.onCall(async (clientData, contex
   );
 });
 
-exports.downloadDouyinVideo = functions.region('asia-east2').https.onCall(async (clientData, context) => {
-  const { data } = await axios.get(
-    clientData.url,
-    {
-      headers: { 'User-Agent': userAgent.data.userAgent }
-    }
-  );
+// exports.downloadDouyinVideo = functions.region('asia-east2').https.onCall(async (clientData, context) => {
+//   const { data } = await axios.get(
+//     clientData.url,
+//     {
+//       headers: { 'User-Agent': userAgent.data.userAgent }
+//     }
+//   );
 
-  const $ = await cheerio.load(data);
+//   const $ = await cheerio.load(data);
 
-  const user = $('p.bottom-user').text();
-  const description = $('p.bottom-desc').text();
-  const videoUrl = $('#theVideo').attr('src');
+//   const user = $('p.bottom-user').text();
+//   const description = $('p.bottom-desc').text();
+//   const videoUrl = $('#theVideo').attr('src');
 
-  if (!user) {
-    return Promise.resolve({ status: 'video-not-found' });
-  }
+//   if (!user) {
+//     return Promise.resolve({ status: 'video-not-found' });
+//   }
 
-  return Promise.resolve(
-    {
-      status: 'ok',
-      name: user.substr(1),
-      handle: user,
-      description,
-      videoUrl
-    }
-  );
-});
+//   return Promise.resolve(
+//     {
+//       status: 'ok',
+//       name: user.substr(1),
+//       handle: user,
+//       description,
+//       videoUrl
+//     }
+//   );
+// });

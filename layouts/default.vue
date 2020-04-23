@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar flat fixed app>
       <nuxt-link to="/" class="d-flex logo justify-center align-center flex-grow-1">
-        <v-img to="/" src="logo.png" :alt="title" max-height="56" max-width="56"></v-img>
+        <v-img to="/" src="logo@56x56.png" :alt="title" max-height="56" max-width="56"></v-img>
       </nuxt-link>
     </v-app-bar>
 

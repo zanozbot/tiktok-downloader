@@ -64,7 +64,37 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
     '@nuxtjs/firebase',
+    '@nuxtjs/pwa'
   ],
+
+  workbox: {
+    runtimeCaching: [
+      {
+        urlPattern: 'https://fonts.googleapis.com/*',
+        handler: 'cacheFirst',
+        method: 'GET',
+        strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+      },
+      {
+        urlPattern: 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css',
+        handler: 'cacheFirst',
+        method: 'GET',
+        strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+      }
+    ]
+  },
+
+  pwa: {
+    manifest: {
+      name: 'TikTok Video Downloader',
+      lang: 'en',
+      short_name: "TikTok Downloader",
+      description: 'TikTok Video Downloader is a completely free online option to download TikTok videos and save them as mp4.',
+      background_color: "#fff",
+      theme_color: "#fe2c55",
+      start_url: "/"
+    }
+  },
 
   firebase: {
     config: {
@@ -78,19 +108,10 @@ module.exports = {
       measurementId: "G-BK6V9Z6K13"
     },
     services: {
-      performance: false,
-      analytics: false,
-      functions: {
-        emulatorPort: 5001
-      }
+      performance: true,
+      analytics: true,
+      functions: true
     }
-  },
-
-  /*
-  ** Axios module configuration
-  */
-  axios: {
-    // See https://github.com/nuxt-community/axios-module#options
   },
 
   buildModules: [
