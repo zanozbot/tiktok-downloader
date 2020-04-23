@@ -17,15 +17,13 @@ module.exports = {
       { hid: 'og:locale', property: 'og:locale', content: 'en' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:image', property: 'og:image', content: 'https://tiktokvideodownloader.online/og-image.png' },
-      { hid: 'og:image', property: 'og:image', content: 'https://tiktokvideodownloader.online/og-image.png' },
       { hid: 'og:site_name', property: 'og:site_name', content: 'TikTok Video Downloader' },
       // Twitter
-      {
-        hid: 'twitter:card', name: 'twitter:card', content: 'summary'
-      },
+      { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
+      { hid: 'twitter:size', name: 'twitter:site', content: 'TikTok Video Downloader' },
       { hid: 'twitter:title', name: 'twitter:title', content: 'Download TikTok videos with best free online TikTok Video Downloader.' },
       { hid: 'twitter:description', name: 'twitter:description', content: 'TikTok Video Downloader gives you a free online option to download TikTok videos to mp4 and answers your TikTok related questions.' },
-      { hid: 'twitter:image:src', name: 'twitter:image:src', content: 'https://tiktokvideodownloader.online/og-image.png' },
+      { hid: 'twitter:image', name: 'twitter:image:src', content: 'https://tiktokvideodownloader.online/og-image.png' },
       // Apple
       { hid: 'apple-mobile-web-app-capable', name: 'apple-mobile-web-app-capable', content: 'yes' },
       { hid: 'apple-mobile-web-app-title', name: 'apple-mobile-web-app-title', content: 'TikTok Video Downloader' },
@@ -42,7 +40,7 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#3B8070' },
+  loading: { color: '#fe2c55' },
 
   /*
   ** Global CSS
