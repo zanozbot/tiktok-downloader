@@ -3,13 +3,15 @@ import * as functions from 'firebase-functions';
 const axios = require("axios")
 const cheerio = require("cheerio")
 
+const random = () => Math.random().toString(36).substr(2, 10);
+
 exports.downloadTikTokVideo = functions.https.onCall(async (clientData, context) => {
   console.log(clientData.url);
 
   const { data } = await axios.get(
     clientData.url,
     {
-      headers: { 'User-Agent': 'Mozilla/5.0 (Android 9; Mobile; rv:68.0) Gecko/68.0 Firefox/68.0' }
+      headers: { 'User-Agent': random() }
     }
   );
 
@@ -46,7 +48,7 @@ exports.downloadTikTokMobileVideo = functions.https.onCall(async (clientData, co
   const { data } = await axios.get(
     clientData.url,
     {
-      headers: { 'User-Agent': 'Mozilla/5.0 (Android 9; Mobile; rv:68.0) Gecko/68.0 Firefox/68.0' }
+      headers: { 'User-Agent': random() }
     }
   );
 
