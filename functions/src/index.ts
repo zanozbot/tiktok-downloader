@@ -3,15 +3,16 @@ import * as functions from 'firebase-functions';
 const axios = require("axios")
 const cheerio = require("cheerio")
 
-const random = () => Math.random().toString(36).substr(2, 10);
-
 exports.downloadTikTokVideo = functions.https.onCall(async (clientData, context) => {
   console.log(clientData.url);
 
   const { data } = await axios.get(
     clientData.url,
     {
-      headers: { 'User-Agent': random() }
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml'
+      }
     }
   );
 
@@ -41,26 +42,4 @@ exports.downloadTikTokVideo = functions.https.onCall(async (clientData, context)
   }
 
   return Promise.resolve(video);
-});
-
-
-exports.downloadTikTokMobileVideo = functions.https.onCall(async (clientData, context) => {
-  const { data } = await axios.get(
-    clientData.url,
-    {
-      headers: { 'User-Agent': random() }
-    }
-  );
-
-  const $ = await cheerio.load(data);
-
-  const canonical = $('link[rel="canonical"]').attr('href');
-
-  console.log(canonical);
-
-  if (!canonical) {
-    return Promise.resolve({ status: 'video-not-found' });
-  } else {
-    return Promise.resolve({ status: 'ok', url: canonical });
-  }
 });

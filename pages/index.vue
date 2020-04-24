@@ -381,10 +381,10 @@ export default {
   },
   methods: {
     download: async function() {
-      const mobile = this.isTikTokMobileVideo(this.url);
-      const normal = this.isTikTokVideo(this.url);
-
-      if (!mobile && !normal) {
+      if (
+        !this.isTikTokVideoShortened(this.url) &&
+        !this.isTikTokVideo(this.url)
+      ) {
         this.errorMessages.push("The given video URL is not valid.");
         this.$fireAnalytics.logEvent("invalid_url");
         return;
@@ -392,30 +392,10 @@ export default {
 
       this.isLoading = true;
 
-      let url = this.url;
-
-      if (mobile) {
-        const { data } = await this.$fireFunc.httpsCallable(
-          "downloadTikTokMobileVideo"
-        )({
-          url
-        });
-        console.log(data);
-        if (data.status === "ok") {
-          url = data.url;
-        } else {
-          this.errorMessages.push(
-            "We couldn't find any video on the given URL."
-          );
-          this.$fireAnalytics.logEvent("video_not_found");
-          return;
-        }
-      }
-
       const { data } = await this.$fireFunc.httpsCallable(
         "downloadTikTokVideo"
       )({
-        url
+        url: this.url
       });
 
       if (data.status === "ok") {
@@ -434,7 +414,7 @@ export default {
     isTikTokVideo: function(url) {
       return /https:\/\/(www.)*tiktok.com\/@.*/.test(url);
     },
-    isTikTokMobileVideo: function(url) {
+    isTikTokVideoShortened: function(url) {
       return /https:\/\/(vt|m).tiktok.com\/(v\/)*.*/.test(url);
     }
   },
