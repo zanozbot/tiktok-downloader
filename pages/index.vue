@@ -48,24 +48,8 @@
       <v-col lg="8" offset-lg="2">
         <h3 class="title font-weight-bold mb-3">Examples of supported TikTok video URLs</h3>
         <v-divider class="mb-3"></v-divider>
-        <p
-          class="mb-0"
-        >Here you will find a few examples which are supported by our free TikTok Video Downloader.</p>
+        <p class="mb-0">Here is an examples which is supported by our free TikTok Video Downloader.</p>
         <v-list>
-          <v-list-item>
-            <v-list-item-icon>
-              <v-icon color="primary">icon-check-circle</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title>
-                <a
-                  href="https://vt.tiktok.com/MQt5Gk/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >https://vt.tiktok.com/MQt5Gk/</a>
-              </v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
           <v-list-item>
             <v-list-item-icon>
               <v-icon color="primary">icon-check-circle</v-icon>
@@ -80,6 +64,11 @@
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
+        </v-list>
+
+        <p>TikTok Video Downloader also support the URLs below, but they have to be extended.</p>
+        <p class="mb-0">You can do that by opening them in a new tab and copying the redirected URL.</p>
+        <v-list>
           <v-list-item>
             <v-list-item-icon>
               <v-icon color="primary">icon-check-circle</v-icon>
@@ -91,6 +80,20 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >https://m.tiktok.com/v/6744084223445044485.html</a>
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon color="primary">icon-check-circle</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>
+                <a
+                  href="https://vt.tiktok.com/MQt5Gk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >https://vt.tiktok.com/MQt5Gk/</a>
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
@@ -381,10 +384,13 @@ export default {
   },
   methods: {
     download: async function() {
-      if (
-        !this.isTikTokVideoShortened(this.url) &&
-        !this.isTikTokVideo(this.url)
-      ) {
+      if (this.isTikTokVideoShortened(this.url)) {
+        this.errorMessages.push("The given URL needs to be extended.");
+        this.$fireAnalytics.logEvent("short_url");
+        return;
+      }
+
+      if (!this.isTikTokVideo(this.url)) {
         this.errorMessages.push("The given video URL is not valid.");
         this.$fireAnalytics.logEvent("invalid_url");
         return;
