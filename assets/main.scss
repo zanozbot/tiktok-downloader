@@ -1,0 +1,25 @@
+@import "./variables.scss";
+@import "bulma/sass/utilities/initial-variables";
+@import "bulma/sass/utilities/functions";
+@import "bulma/sass/utilities/derived-variables";
+
+$secondary-invert: findColorInvert($secondary) !default;
+
+$custom-colors: (
+    "secondary":($secondary, $secondary-invert)
+);
+
+$colors: map-merge($colors, $custom-colors);
+
+@import "bulma/bulma";
+
+.page-enter-active, .page-leave-active {
+  transition: opacity .5s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+}
+
+.has-text-weight-black {
+  font-weight: 900 !important;
+}

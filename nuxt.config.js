@@ -46,14 +46,13 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '~/assets/main.css'
+    '~/assets/main.scss'
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~plugins/breakpoints.js'
   ],
 
   /*
@@ -115,15 +114,6 @@ module.exports = {
   },
   functions: {
     preload: true
-  },
-
-  buildModules: [
-    '@nuxtjs/vuetify',
-  ],
-
-  vuetify: {
-    defaultAssets: false,
-    optionsPath: './vuetify.options.js'
   },
 
   /*
