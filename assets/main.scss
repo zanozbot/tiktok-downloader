@@ -19,7 +19,9 @@ $colors: map-merge($colors, $custom-colors);
 .page-enter, .page-leave-to {
   opacity: 0;
 }
-
 .has-text-weight-black {
   font-weight: 900 !important;
+}
+.is-padding-top-less {
+  padding-top: 0;
 }
