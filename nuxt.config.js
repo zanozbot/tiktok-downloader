@@ -31,10 +31,11 @@ module.exports = {
     ],
     link: [
       { rel: 'preconnect', href: "https://www.googletagmanager.com" },
+      { rel: 'preconnect', href: "https://cdn.jsdelivr.net" },
+      { rel: 'preconnect', href: "https://firebaseinstallations.googleapis.com" },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'apple-touch-icon', sizes: '180x180', href: 'https://tiktokvideodownloader.online/apple-touch-icon.png' },
-      { rel: 'stylesheet', href: '/fonts.css' },
+      { rel: 'apple-touch-icon', sizes: '180x180', href: 'https://tiktokvideodownloader.online/apple-touch-icon.png' }
     ]
   },
 
