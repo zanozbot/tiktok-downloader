@@ -30,6 +30,7 @@ module.exports = {
       { hid: 'apple-mobile-web-app-title', name: 'apple-mobile-web-app-title', content: 'TikTok Video Downloader' },
     ],
     link: [
+      { rel: 'preconnect', href: "https://www.googletagmanager.com" },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'apple-touch-icon', sizes: '180x180', href: 'https://tiktokvideodownloader.online/apple-touch-icon.png' },
@@ -60,7 +61,8 @@ module.exports = {
   */
   modules: [
     '@nuxtjs/firebase',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    'nuxt-purgecss'
   ],
 
   workbox: {

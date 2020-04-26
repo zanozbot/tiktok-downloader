@@ -14,11 +14,13 @@
         <div class="column is-10-widescreen">
           <label
             class="label is-size-7"
+            for="video-url"
             :class="{'has-text-danger': errorMessages.length > 0}"
           >TikTok video URL</label>
           <div class="field has-addons">
             <div class="control">
               <input
+                id="video-url"
                 v-model="url"
                 class="input is-medium"
                 type="text"
@@ -36,7 +38,7 @@
           </div>
           <p
             class="help"
-            :class="{'is-danger': errorMessages.length > 0, 'has-text-grey': errorMessages.length === 0}"
+            :class="{'is-danger': errorMessages.length > 0}"
           >{{ errorMessages.length > 0 ? errorMessages[0] : 'See the examples below'}}</p>
         </div>
       </div>
@@ -54,7 +56,6 @@
                 <i class="icon-check-circle"></i>
               </span>
               <a
-                class="has-text-primary"
                 href="https://www.tiktok.com/@samuelgrubbs/video/6744084223445044485"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -69,7 +70,6 @@
                 <i class="icon-check-circle"></i>
               </span>
               <a
-                class="has-text-primary"
                 href="https://m.tiktok.com/v/6744084223445044485.html"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -81,7 +81,6 @@
                 <i class="icon-check-circle"></i>
               </span>
               <a
-                class="has-text-primary"
                 href="https://vt.tiktok.com/MQt5Gk/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -132,7 +131,6 @@
               <span>
                 Head over to
                 <a
-                  class="has-text-primary"
                   href="https://www.tiktok.com/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -298,7 +296,6 @@
             <p>
               All you have to do is download the TikTok app or navigate to
               <a
-                class="has-text-primary"
                 href="https://www.tiktok.com/"
                 target="_blank"
                 rel="noopener noreferrer"

@@ -1,22 +1,24 @@
 <template>
   <div id="app">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <nuxt-link to="/" class="navbar-item">
-          <img
-            class="logo"
-            src="logo@56x56.png"
-            alt="TikTok Video Downloader"
-            width="56"
-            height="56"
-          />
-        </nuxt-link>
-      </div>
-    </nav>
+    <header>
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <nuxt-link to="/" class="navbar-item">
+            <img
+              class="logo"
+              src="logo@56x56.png"
+              alt="TikTok Video Downloader"
+              width="56"
+              height="56"
+            />
+          </nuxt-link>
+        </div>
+      </nav>
+    </header>
 
-    <div id="content">
+    <main>
       <nuxt />
-    </div>
+    </main>
 
     <footer class="footer has-background-black">
       <div class="content has-text-centered has-text-white is-size-7 has-text-weight-bold">
@@ -34,34 +36,6 @@
       </div>
     </footer>
   </div>
-
-  <!-- <v-app>
-    <v-app-bar flat fixed app>
-      <nuxt-link to="/" class="d-flex logo justify-center align-center flex-grow-1">
-        <v-img to="/" src="logo@56x56.png" :alt="title" max-height="56" max-width="56"></v-img>
-      </nuxt-link>
-    </v-app-bar>
-
-    <v-content>
-      <nuxt />
-    </v-content>
-
-    <v-footer class="black mt-5">
-      <v-row justify="center" no-gutters>
-        <nuxt-link
-          class="ma-2 grey--text text--lighten-4 footer-link caption"
-          to="/privacy-policy"
-        >Privacy Policy</nuxt-link>
-        <nuxt-link
-          class="ma-2 grey--text text--lighten-4 footer-link caption"
-          to="/terms-and-conditions"
-        >Terms and Conditions</nuxt-link>
-        <v-col cols="12 py-4 grey--text text--lighten-1 text-center caption">
-          <strong>{{ title }}</strong> &copy; 2020
-        </v-col>
-      </v-row>
-    </v-footer>
-  </v-app>-->
 </template>
 
 <script>
@@ -84,8 +58,9 @@ export default {};
     }
   }
 }
-nav {
+header {
   position: sticky;
+  z-index: 1;
   top: 0;
   border-bottom: 1px solid #e0e0e0 !important;
   .navbar-brand {
