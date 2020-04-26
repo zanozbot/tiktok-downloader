@@ -1,41 +1,42 @@
 <template>
-  <v-container>
-    <v-row>
-      <v-col cols="12" lg="8" offset-lg="2" xl="6" offset-xl="3">
-        <h1
-          class="display-1 font-weight-black mb-8 text-center"
-          :class="{'headline': $breakpoint.is.smAndDown}"
-        >Your TikTok video is ready for download!</h1>
-        <div class="d-flex video-card" :class="{'flex-column': $breakpoint.is.smAndDown}">
-          <video loop controls :src="video.videoUrl"></video>
-          <div class="d-flex flex-column download-content">
-            <div class="d-flex align-center">
-              <v-avatar color="secondary">
-                <span class="white--text headline">{{ video.name.charAt(0) }}</span>
-              </v-avatar>
-              <div class="ml-3">
-                <div class="title font-weight-bold">{{ video.name }}</div>
-                <div class="caption">{{ video.handle }}</div>
+  <div class="container">
+    <section class="section">
+      <div class="columns is-centered">
+        <div class="column is-8-desktop is-7-widescreen">
+          <h1
+            class="title has-text-weight-black has-text-centered"
+          >Your TikTok video is ready for download!</h1>
+          <div class="is-flex video-card">
+            <video loop controls :src="video.videoUrl"></video>
+            <div class="is-flex flex-column download-content">
+              <div class="is-flex align-center">
+                <div class="avatar is-flex align-center has-background-primary">
+                  <span
+                    class="has-text-weight-bold is-uppercase has-text-white"
+                  >{{ video.name.charAt(0) }}</span>
+                </div>
+                <div>
+                  <div class="subtitle has-text-weight-bold">{{ video.name }}</div>
+                  <div class="is-size-7">{{ video.handle }}</div>
+                </div>
               </div>
+
+              <div class="video-description">{{ video.description }}</div>
+
+              <button class="button is-medium is-primary" @click="downloadVideo">
+                <span class="icon has-text-white">
+                  <i class="icon-download"></i>
+                </span>
+                <span>Download video</span>
+              </button>
+
+              <nuxt-link to="/" class="button is-primary is-outlined">Download another video</nuxt-link>
             </div>
-
-            <v-divider class="mt-4 mb-5"></v-divider>
-
-            <div class="flex-grow-1 mb-5">{{ video.description }}</div>
-
-            <v-btn @click="downloadVideo" color="primary" height="56px" large>
-              <v-icon class="mr-3">icon-download</v-icon>
-              <span>Download video</span>
-            </v-btn>
-
-            <v-btn to="/" class="mt-4" color="primary" outlined large>
-              <span>Download another video</span>
-            </v-btn>
           </div>
         </div>
-      </v-col>
-    </v-row>
-  </v-container>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -74,6 +75,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.align-center {
+  align-items: center;
+}
+.flex-column {
+  flex-direction: column;
+}
+.video-description {
+  margin: 1.5rem 0;
+  flex: 1;
+}
 video {
   max-height: 70vh;
   border-top-left-radius: 16px;
@@ -83,28 +94,45 @@ video {
     outline: none;
   }
 }
+.button:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
 .download-content {
   border: 1px solid #e0e0e0;
   border-left: none;
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
   padding: 2rem;
-}
-.video-card.flex-column {
-  video {
-    border-radius: 0;
-    border: 1px solid #e0e0e0;
-    border-bottom: none;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
-    height: 60vh;
+  flex: 1;
+  .avatar {
+    margin-right: 0.75rem;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    justify-content: center;
   }
-  .download-content {
-    border-top-right-radius: 0;
-    border: 1px solid #e0e0e0;
-    border-top: none;
-    border-bottom-left-radius: 16px;
-    padding: 1rem;
+  .subtitle {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .video-card {
+    flex-direction: column;
+    video {
+      border-radius: 0;
+      border: 1px solid #e0e0e0;
+      border-bottom: none;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+      height: 60vh;
+    }
+    .download-content {
+      border-top-right-radius: 0;
+      border: 1px solid #e0e0e0;
+      border-top: none;
+      border-bottom-left-radius: 16px;
+      padding: 1rem;
+    }
   }
 }
 </style>
