@@ -28,14 +28,15 @@
             </div>
             <div class="control">
               <a
+                @click="download"
                 class="button is-primary is-medium is-fullwidth"
                 :class="{'is-loading': isLoading}"
               >Download video</a>
             </div>
           </div>
           <p
-            class="help has-text-grey"
-            :class="{'is-danger': errorMessages.length > 0}"
+            class="help"
+            :class="{'is-danger': errorMessages.length > 0, 'has-text-grey': errorMessages.length === 0}"
           >{{ errorMessages.length > 0 ? errorMessages[0] : 'See the examples below'}}</p>
         </div>
       </div>
@@ -484,6 +485,25 @@ export default {
   }
   a {
     word-break: break-all;
+  }
+}
+.label.has-text-danger {
+  animation: invalid 200ms;
+}
+@keyframes invalid {
+  0% {
+  }
+  25% {
+    margin-left: 0.5rem;
+  }
+  40% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 0.25rem;
+  }
+  100% {
+    margin-left: 0;
   }
 }
 </style>
