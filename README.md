@@ -1,6 +1,8 @@
 # TikTok Video Downloader <img src="https://nuxtjs.org/logos/built-with-nuxt.svg" alt="drawing" width="200"/>
 
-> Download TikTok videos online with TikTok Video Downloader. Completely free.
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
+Download TikTok videos online with TikTok Video Downloader. Completely free.
 
 ## About
 I created TikTok Video Downloader with the intention of learning new technology.
