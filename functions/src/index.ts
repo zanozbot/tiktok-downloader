@@ -28,8 +28,8 @@ exports.downloadTikTokVideo = functions.https.onCall(async (clientData, context)
     return Promise.resolve({ status: 'video-not-found' });
   }
 
-  const name = json.props.pageProps.videoData.authorInfos.uniqueId;
-  const handle = '@' + json.props.pageProps.videoData.authorInfos.nickName;
+  const name = json.props.pageProps.videoData.authorInfos.nickName;
+  const handle = '@' + json.props.pageProps.videoData.authorInfos.uniqueId;
   const description = json.props.pageProps.videoData.itemInfos.text;
 
   const video = {
