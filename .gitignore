@@ -10,15 +10,12 @@ npm-debug.log
 # Nuxt generate
 dist
 
+# Other
 .editorconfig
-
 package-lock.json
-
-functions/firebase-debug.log
-
-.firebase/hosting.ZGlzdA.cache
-
+.firebase
 report.20200422.222542.14612.0.001.json
-
 sw.*
-firebase-debug.log
+*.log
+.vscode
+.firebase
