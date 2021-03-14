@@ -13,7 +13,7 @@ const TikTokScraper = require("tiktok-scraper");
 const pipeline = promisify(stream.pipeline);
 const app = express();
 
-app.get("/", async (req: any, res: any) => {
+app.get("/api/download", async (req: any, res: any) => {
   const randomString = Array.from(
     { length: 4 },
     () => Math.random().toString(36)[2]
@@ -25,6 +25,7 @@ app.get("/", async (req: any, res: any) => {
     Cookie: "tt_webid_v2=" + randomString
   };
 
+  // TODO: Get URL from req
   const videoMeta = await TikTokScraper.getVideoMeta(
     "https://www.tiktok.com/@venera_creations/video/6925128747318463750",
     headers
