@@ -393,33 +393,27 @@ export default {
     download: async function() {
       if (this.isTikTokVideoShortened(this.url)) {
         this.errorMessages.push("The given URL needs to be extended.");
-        this.$fireAnalytics.logEvent("short_url");
+        this.$fire.analytics.logEvent("short_url");
         return;
       }
 
       if (!this.isTikTokVideo(this.url)) {
         this.errorMessages.push("The given video URL is not valid.");
-        this.$fireAnalytics.logEvent("invalid_url");
+        this.$fire.analytics.logEvent("invalid_url");
         return;
       }
 
       this.isLoading = true;
 
-      const { data } = await this.$fireFunc.httpsCallable(
-        "downloadTikTokVideo"
+      const { data } = await this.$fire.functions.httpsCallable(
+        "videoMetadata"
       )({
         url: this.url
       });
 
-      if (data.status === "ok") {
-        this.$store.commit("addVideo", data);
-        this.$router.push({ path: "/download" });
-        this.$fireAnalytics.logEvent("video_found");
-      } else {
-        this.isLoading = false;
-        this.errorMessages.push("We couldn't find any video on the given URL.");
-        this.$fireAnalytics.logEvent("video_not_found");
-      }
+      this.$store.commit("addVideo", data);
+      this.$router.push({ path: "/download" });
+      this.$fire.analytics.logEvent("load_metadata");
     },
     clearUrl: function() {
       this.url = "";

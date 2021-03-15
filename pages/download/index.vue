@@ -7,7 +7,7 @@
             class="title has-text-weight-black has-text-centered"
           >Your TikTok video is ready for download!</h1>
           <div class="is-flex video-card">
-            <video loop controls :src="video.videoUrl"></video>
+            <img :src="video.cover" :alt="video.description">
             <div class="is-flex flex-column download-content">
               <div class="is-flex align-center">
                 <div class="avatar is-flex align-center has-background-primary">
@@ -40,8 +40,6 @@
 </template>
 
 <script>
-import * as downlaod from "downloadjs";
-
 export default {
   middleware: "hasVideo",
   head: {
@@ -62,10 +60,10 @@ export default {
   methods: {
     downloadVideo: function() {
       try {
-        downlaod(this.video.videoUrl);
-        this.$fireAnalytics.logEvent("video_downloaded");
+        // TODO: Download video
+        this.$fire.analytics.logEvent("video_downloaded");
       } catch (error) {
-        this.$fireAnalytics.logEvent("video_download_error", {
+        this.$fire.analytics.logEvent("video_download_error", {
           error: error.toString()
         });
       }
@@ -85,7 +83,7 @@ export default {
   margin: 1.5rem 0;
   flex: 1;
 }
-video {
+img {
   max-height: 70vh;
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
