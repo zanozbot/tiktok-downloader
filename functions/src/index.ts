@@ -76,7 +76,8 @@ exports.videoMetadata = functions.https.onCall(
     const response = {
       cover: videoMeta.collector[0].imageUrl,
       name: videoMeta.collector[0].authorMeta.nickName,
-      description: videoMeta.collector[0].text
+      description: videoMeta.collector[0].text,
+      url
     };
 
     return response;
