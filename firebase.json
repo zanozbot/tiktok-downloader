@@ -9,7 +9,7 @@
     "rewrites": [
       {
         "source": "/api/download",
-        "function": "downloadTikTokVideo"
+        "function": "app"
       },
       {
         "source": "**",

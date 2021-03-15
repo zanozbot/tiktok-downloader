@@ -13,7 +13,13 @@ const TikTokScraper = require("tiktok-scraper");
 const pipeline = promisify(stream.pipeline);
 const app = express();
 
-app.get("/api/download", async (req: any, res: any) => {
+/**
+ * A helper function which returns metadata
+ * @param req Request
+ * @param res Response
+ * @returns TikTok video metadata
+ */
+async function getMetadata(url: string): Promise<any> {
   const randomString = Array.from(
     { length: 4 },
     () => Math.random().toString(36)[2]
@@ -25,22 +31,56 @@ app.get("/api/download", async (req: any, res: any) => {
     Cookie: "tt_webid_v2=" + randomString
   };
 
-  // TODO: Get URL from req
-  const videoMeta = await TikTokScraper.getVideoMeta(
-    "https://www.tiktok.com/@venera_creations/video/6925128747318463750",
-    headers
-  );
+  return await TikTokScraper.getVideoMeta(url, headers);
+}
 
-  const url = videoMeta.collector[0].videoUrl;
+/**
+ * Downloads the TikTok video
+ */
+app.get("/api/download", async (req: any, res: any) => {
+  const url = req.query.url;
+
+  if (!url) {
+    res.status(403).end();
+  }
+
+  const videoMeta = await getMetadata(url);
+
+  console.dir(videoMeta, { depth: 4 });
+
+  const videoUrl = videoMeta.collector[0].videoUrl;
   const fileName = `${videoMeta.collector[0].authorMeta.name}_${videoMeta.collector[0].id}.mp4`;
   const tempFilePath = path.join(os.tmpdir(), fileName);
 
   await pipeline(
-    got.stream(url, { headers: videoMeta.headers }),
+    got.stream(videoUrl, { headers: videoMeta.headers }),
     fs.createWriteStream(tempFilePath)
   );
 
   res.download(tempFilePath);
 });
 
-exports.downloadTikTokVideo = functions.https.onRequest(app);
+/**
+ * Retrieves TikTok video's metadata
+ */
+exports.videoMetadata = functions.https.onCall(
+  async (data: any, context: any) => {
+    const url = data.url;
+
+    if (!url) {
+      return null;
+    }
+
+    const videoMeta = await getMetadata(url);
+
+    const response = {
+      cover: videoMeta.collector[0].imageUrl,
+      name: videoMeta.collector[0].authorMeta.nickName,
+      description: videoMeta.collector[0].text
+    };
+
+    return response;
+  }
+);
+
+exports.app = functions.https.onRequest(app);
