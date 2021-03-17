@@ -1,8 +1,12 @@
 # TikTok Video Downloader <img src="https://nuxtjs.org/logos/built-with-nuxt.svg" alt="drawing" width="200"/>
 
+> Download TikTok videos online with TikTok Video Downloader. Completely free.
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Download TikTok videos online with TikTok Video Downloader. Completely free.
+<a href="https://www.buymeacoffee.com/zanozbot">
+  <img alt="Buy Me A Coffee" src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" style="height: auto !important; width: auto !important;" />
+</a>
 
 ## About
 
