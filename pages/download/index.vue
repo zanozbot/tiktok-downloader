@@ -23,12 +23,12 @@
 
               <div class="video-description">{{ video.description }}</div>
 
-              <button class="button is-medium is-primary" @click="downloadVideo">
+              <a class="button is-medium is-primary" :href="'/api/download?url=' + video.url" target="_blank" @click="downloadVideo">
                 <span class="icon has-text-white">
                   <i class="icon-download"></i>
                 </span>
                 <span>Download video</span>
-              </button>
+              </a>
 
               <nuxt-link to="/" class="button is-primary is-outlined">Download another video</nuxt-link>
             </div>
@@ -59,14 +59,7 @@ export default {
   },
   methods: {
     downloadVideo: function() {
-      try {
-        // TODO: Download video
-        this.$fire.analytics.logEvent("video_downloaded");
-      } catch (error) {
-        this.$fire.analytics.logEvent("video_download_error", {
-          error: error.toString()
-        });
-      }
+      this.$fire.analytics.logEvent("video_downloaded");
     }
   }
 };

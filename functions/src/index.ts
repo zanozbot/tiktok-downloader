@@ -31,7 +31,11 @@ async function getMetadata(url: string): Promise<any> {
     Cookie: "tt_webid_v2=" + randomString
   };
 
-  return await TikTokScraper.getVideoMeta(url, headers);
+  try {
+    return await TikTokScraper.getVideoMeta(url, headers);
+  } catch (error) {
+    return null;
+  }
 }
 
 /**
@@ -46,7 +50,9 @@ app.get("/api/download", async (req: any, res: any) => {
 
   const videoMeta = await getMetadata(url);
 
-  console.dir(videoMeta, { depth: 4 });
+  if (!videoMeta) {
+    return res.json({ message: "The video does not exist." });
+  }
 
   const videoUrl = videoMeta.collector[0].videoUrl;
   const fileName = `${videoMeta.collector[0].authorMeta.name}_${videoMeta.collector[0].id}.mp4`;
@@ -72,6 +78,10 @@ exports.videoMetadata = functions.https.onCall(
     }
 
     const videoMeta = await getMetadata(url);
+
+    if (!videoMeta) {
+      return null;
+    }
 
     const response = {
       cover: videoMeta.collector[0].imageUrl,

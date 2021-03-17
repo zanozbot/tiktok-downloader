@@ -62,9 +62,6 @@
               >https://www.tiktok.com/@samuelgrubbs/video/6744084223445044485</a>
             </p>
 
-            <p>TikTok Video Downloader also support the URLs below, but they have to be extended.</p>
-            <p>You can do that by opening them in a new tab and copying the redirected URL.</p>
-
             <p class="custom-item is-flex">
               <span class="icon has-text-primary">
                 <i class="icon-check-circle"></i>
@@ -391,15 +388,8 @@ export default {
   },
   methods: {
     download: async function() {
-      if (this.isTikTokVideoShortened(this.url)) {
-        this.errorMessages.push("The given URL needs to be extended.");
-        this.$fire.analytics.logEvent("short_url");
-        return;
-      }
-
       if (!this.isTikTokVideo(this.url)) {
-        this.errorMessages.push("The given video URL is not valid.");
-        this.$fire.analytics.logEvent("invalid_url");
+        this.showError();
         return;
       }
 
@@ -411,18 +401,25 @@ export default {
         url: this.url
       });
 
+      if (!data) {
+        this.showError();
+        return;
+      }
+
       this.$store.commit("addVideo", data);
       this.$router.push({ path: "/download" });
-      this.$fire.analytics.logEvent("load_metadata");
+      this.$fire.analytics.logEvent("load_metadata", {url: this.url});
     },
     clearUrl: function() {
       this.url = "";
     },
     isTikTokVideo: function(url) {
-      return /https:\/\/(www.)*tiktok.com\/@.*/.test(url);
+      return url.includes('tiktok');
     },
-    isTikTokVideoShortened: function(url) {
-      return /https:\/\/(vt|m).tiktok.com\/(v\/)*.*/.test(url);
+    showError: function() {
+      this.isLoading = false;
+      this.errorMessages.push("The given video URL is not valid.");
+      this.$fire.analytics.logEvent("invalid_url");
     }
   },
   head: {
