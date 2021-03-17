@@ -22,7 +22,7 @@ Create a new app, copy the config and replace the lines 148-155 in `nuxt.config.
 
 In the Firebase Console configure Firebase Hosting, Firebase Functions, and enable Firebase Analytics. In order to use Firebase Functions you'll have to upgrade your project to a paid version. Keep in mind Google has a very generous free plan.
 
-> Always set a budget report for you projects.
+> Always set a budget limit for you projects.
 
 Finally, navigate to the project in your console of choice and link your newly created Firebase project.
 
