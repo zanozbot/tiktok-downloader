@@ -32,7 +32,7 @@ $ firebase init
 
 Select to use Firebase Functions and Firebase Hosting. Do the same for the emulators. Keep all the defaults export change the public folder to `dist`. Press `n` for all overrides.
 
-## Build
+## Build and Test
 
 ### Nuxt
 
@@ -55,11 +55,12 @@ $ cd functions
 # install dependencies
 $ npm install
 
+# build the functions
+$ npm run build
+
 # serve at localhost:5001
 $ npm run serve
 ```
-
-## Test
 
 ## Deploy
 
