@@ -2,10 +2,12 @@
   <div class="container">
     <section class="hero">
       <div class="hero-body has-text-centered">
-        <h1 class="title is-size-1-desktop has-text-weight-black">TikTok Video Downloader</h1>
-        <h2
-          class="subtitle is-size-4-desktop"
-        >Download TikTok videos online. On any device. Completely free.</h2>
+        <h1 class="title is-size-1-desktop has-text-weight-black">
+          TikTok Video Downloader
+        </h1>
+        <h2 class="subtitle is-size-4-desktop">
+          Download TikTok videos online. On any device. Completely free.
+        </h2>
       </div>
     </section>
 
@@ -15,8 +17,9 @@
           <label
             class="label is-size-7"
             for="video-url"
-            :class="{'has-text-danger': errorMessages.length > 0}"
-          >TikTok video URL</label>
+            :class="{ 'has-text-danger': errorMessages.length > 0 }"
+            >TikTok video URL</label
+          >
           <div class="field has-addons">
             <div class="control">
               <input
@@ -32,14 +35,18 @@
               <a
                 @click="download"
                 class="button is-primary is-medium is-fullwidth"
-                :class="{'is-loading': isLoading}"
-              >Download video</a>
+                :class="{ 'is-loading': isLoading }"
+                >Download video</a
+              >
             </div>
           </div>
-          <p
-            class="help"
-            :class="{'is-danger': errorMessages.length > 0}"
-          >{{ errorMessages.length > 0 ? errorMessages[0] : 'See the examples below'}}</p>
+          <p class="help" :class="{ 'is-danger': errorMessages.length > 0 }">
+            {{
+              errorMessages.length > 0
+                ? errorMessages[0]
+                : "See the examples below"
+            }}
+          </p>
         </div>
       </div>
     </section>
@@ -49,7 +56,10 @@
         <div class="column is-10-widescreen">
           <h3 class="title is-5">Examples of supported TikTok video URLs</h3>
           <div class="content">
-            <p>Here is an examples which is supported by our free TikTok Video Downloader.</p>
+            <p>
+              Here is an examples which is supported by our free TikTok Video
+              Downloader.
+            </p>
 
             <p class="custom-item is-flex">
               <span class="icon has-text-primary">
@@ -59,7 +69,8 @@
                 href="https://www.tiktok.com/@samuelgrubbs/video/6744084223445044485"
                 target="_blank"
                 rel="noopener noreferrer"
-              >https://www.tiktok.com/@samuelgrubbs/video/6744084223445044485</a>
+                >https://www.tiktok.com/@samuelgrubbs/video/6744084223445044485</a
+              >
             </p>
 
             <p class="custom-item is-flex">
@@ -70,18 +81,8 @@
                 href="https://m.tiktok.com/v/6744084223445044485.html"
                 target="_blank"
                 rel="noopener noreferrer"
-              >https://m.tiktok.com/v/6744084223445044485.html</a>
-            </p>
-
-            <p class="custom-item is-flex">
-              <span class="icon has-text-primary">
-                <i class="icon-check-circle"></i>
-              </span>
-              <a
-                href="https://vt.tiktok.com/MQt5Gk/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >https://vt.tiktok.com/MQt5Gk/</a>
+                >https://m.tiktok.com/v/6744084223445044485.html</a
+              >
             </p>
           </div>
         </div>
@@ -93,9 +94,18 @@
         <div class="column is-10-widescreen">
           <h3 class="title is-5">What is TikTok?</h3>
           <div class="content">
-            <p>TikTok is a Chinese video-sharing social networking service owned by ByteDance.</p>
-            <p>It is used to create short dance, lip-sync, comedy, and talent videos.</p>
-            <p>The application was merged with musical.ly in 2018 and allows users to create looping short music and lip-sync videos.</p>
+            <p>
+              TikTok is a Chinese video-sharing social networking service owned
+              by ByteDance.
+            </p>
+            <p>
+              It is used to create short dance, lip-sync, comedy, and talent
+              videos.
+            </p>
+            <p>
+              The application was merged with musical.ly in 2018 and allows
+              users to create looping short music and lip-sync videos.
+            </p>
           </div>
         </div>
       </div>
@@ -108,9 +118,13 @@
           <div class="content">
             <p>You have come to the right place.</p>
             <p>
-              <strong>TikTok Video Downloader</strong> allows you to do just that.
+              <strong>TikTok Video Downloader</strong> allows you to do just
+              that.
             </p>
-            <p>The following two sections explain in detail how to download TikTok videos for free on PC or mobile.</p>
+            <p>
+              The following two sections explain in detail how to download
+              TikTok videos for free on PC or mobile.
+            </p>
           </div>
         </div>
       </div>
@@ -119,7 +133,9 @@
     <section class="section is-padding-top-less">
       <div class="columns is-centered">
         <div class="column is-10-widescreen">
-          <h3 class="title is-5">How to download TikTok videos for free on PC?</h3>
+          <h3 class="title is-5">
+            How to download TikTok videos for free on PC?
+          </h3>
           <div class="content">
             <p class="custom-item is-flex">
               <span class="icon has-text-primary">
@@ -131,7 +147,8 @@
                   href="https://www.tiktok.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                >https://www.tiktok.com/</a>
+                  >https://www.tiktok.com/</a
+                >
               </span>
             </p>
             <p class="custom-item is-flex">
@@ -149,7 +166,8 @@
                 <span class="has-text-weight-bold">Copy link</span>
                 <span class="icon icon-text">
                   <i class="icon-link"></i>
-                </span> button.
+                </span>
+                button.
               </span>
             </p>
             <p class="custom-item is-flex">
@@ -180,7 +198,9 @@
     <section class="section is-padding-top-less">
       <div class="columns is-centered">
         <div class="column is-10-widescreen">
-          <h3 class="title is-5">How to download TikTok videos for free on iPhone or Android?</h3>
+          <h3 class="title is-5">
+            How to download TikTok videos for free on iPhone or Android?
+          </h3>
           <div class="content">
             <p class="custom-item is-flex">
               <span class="icon has-text-primary">
@@ -203,7 +223,8 @@
                 <span class="has-text-weight-bold">Share</span>
                 <span class="icon icon-text">
                   <i class="icon-share"></i>
-                </span> button at the bottom right.
+                </span>
+                button at the bottom right.
               </span>
             </p>
             <p class="custom-item is-flex">
@@ -256,8 +277,7 @@
           <div class="content">
             <p>
               Yes, you can download Tik Tok Live videos, but only
-              <strong>after</strong> they
-              <strong>finish streaming</strong> 🤓.
+              <strong>after</strong> they <strong>finish streaming</strong> 🤓.
             </p>
           </div>
         </div>
@@ -267,15 +287,26 @@
     <section class="section is-padding-top-less">
       <div class="columns is-centered">
         <div class="column is-10-widescreen">
-          <h3 class="title is-5">Can I download TikTok videos without a watermark?</h3>
+          <h3 class="title is-5">
+            Can I download TikTok videos without a watermark?
+          </h3>
           <div class="content">
-            <p>A lot of other providers try to lure by saying you will be able to download videos without the watermark.</p>
+            <p>
+              A lot of other providers try to lure by saying you will be able to
+              download videos without the watermark.
+            </p>
             <p>
               That just
-              <strong>isn't true</strong> 🤯. TikTok put the watermark on the videos for a reason.
+              <strong>isn't true</strong> 🤯. TikTok put the watermark on the
+              videos for a reason.
             </p>
-            <p>Remember, someone else made that video content and TikTok owns it.</p>
-            <p>Without proper attribution, you are essentially stealing someone's property.</p>
+            <p>
+              Remember, someone else made that video content and TikTok owns it.
+            </p>
+            <p>
+              Without proper attribution, you are essentially stealing someone's
+              property.
+            </p>
           </div>
         </div>
       </div>
@@ -284,11 +315,14 @@
     <section class="section is-padding-top-less">
       <div class="columns is-centered">
         <div class="column is-10-widescreen">
-          <h3 class="title is-5">Do I need an account to download TikTok videos?</h3>
+          <h3 class="title is-5">
+            Do I need an account to download TikTok videos?
+          </h3>
           <div class="content">
             <p>
               You
-              <strong>don't need</strong> an account to watch popular TikTok videos 🤩.
+              <strong>don't need</strong> an account to watch popular TikTok
+              videos 🤩.
             </p>
             <p>
               All you have to do is download the TikTok app or navigate to
@@ -296,9 +330,13 @@
                 href="https://www.tiktok.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-              >https://www.tiktok.com/</a>.
+                >https://www.tiktok.com/</a
+              >.
             </p>
-            <p>Which is more than enough to get the video link of you liking and download the video.</p>
+            <p>
+              Which is more than enough to get the video link of you liking and
+              download the video.
+            </p>
           </div>
         </div>
       </div>
@@ -307,9 +345,14 @@
     <section class="section is-padding-top-less">
       <div class="columns is-centered">
         <div class="column is-10-widescreen">
-          <h3 class="title is-5">Where do TikTok videos get saved after being downloaded?</h3>
+          <h3 class="title is-5">
+            Where do TikTok videos get saved after being downloaded?
+          </h3>
           <div class="content">
-            <p>All of the downloaded videos will be saved into whatever folder your browser set as the default folder for downloads.</p>
+            <p>
+              All of the downloaded videos will be saved into whatever folder
+              your browser set as the default folder for downloads.
+            </p>
             <p>
               There is quite a big chance you will find them in your
               <strong>Downloads</strong> folder 📥.
@@ -322,14 +365,19 @@
     <section class="section is-padding-top-less">
       <div class="columns is-centered">
         <div class="column is-10-widescreen">
-          <h3 class="title is-5">Is TikTok Video Downloader storing downloaded videos?</h3>
+          <h3 class="title is-5">
+            Is TikTok Video Downloader storing downloaded videos?
+          </h3>
           <div class="content">
             <p>
               We do
-              <strong>not</strong> store videos,
-              <strong>neither</strong> do we keep copies of them.
+              <strong>not</strong> store videos, <strong>neither</strong> do we
+              keep copies of them.
             </p>
-            <p>All of the videos are hosted on and downloaded from TikTok's servers.</p>
+            <p>
+              All of the videos are hosted on and downloaded from TikTok's
+              servers.
+            </p>
           </div>
         </div>
       </div>
@@ -338,12 +386,15 @@
     <section class="section is-padding-top-less">
       <div class="columns is-centered">
         <div class="column is-10-widescreen">
-          <h3 class="title is-5">Is downloading TikTok videos with our service free?</h3>
+          <h3 class="title is-5">
+            Is downloading TikTok videos with our service free?
+          </h3>
           <div class="content">
+            <p><strong>Yes</strong>, and it will stay like that! 😎</p>
             <p>
-              <strong>Yes</strong>, and it will stay like that! 😎
+              You might see some ads. It's how we cover the processing expenses
+              and further development.
             </p>
-            <p>You might see some ads. It's how we cover the processing expenses and further development.</p>
             <p>
               So we kindly ask you to
               <strong>turn off your adblocker</strong>, if you are using one.
@@ -360,13 +411,24 @@
           <div class="content">
             <p>
               We created
-              <strong>TikTok Video Downloader</strong> with the intention of learning new technology.
+              <strong>TikTok Video Downloader</strong> with the intention of
+              learning new technology.
             </p>
-            <p>This downloader is one of the best video downloaders out there, without the nonsense other providers might feed you with.</p>
-            <p>It was designed to be used as an standalone app, so you are not required to install anything else.</p>
-            <p>As long as you are online and with a TikTok video link you are all set and ready to download.</p>
             <p>
-              After the video link has been processed, you will be able to download the video as a
+              This downloader is one of the best video downloaders out there,
+              without the nonsense other providers might feed you with.
+            </p>
+            <p>
+              It was designed to be used as an standalone app, so you are not
+              required to install anything else.
+            </p>
+            <p>
+              As long as you are online and with a TikTok video link you are all
+              set and ready to download.
+            </p>
+            <p>
+              After the video link has been processed, you will be able to
+              download the video as a
               <strong>mp4</strong>.
             </p>
           </div>
@@ -408,13 +470,13 @@ export default {
 
       this.$store.commit("addVideo", data);
       this.$router.push({ path: "/download" });
-      this.$fire.analytics.logEvent("load_metadata", {url: this.url});
+      this.$fire.analytics.logEvent("load_metadata", { url: this.url });
     },
     clearUrl: function() {
       this.url = "";
     },
     isTikTokVideo: function(url) {
-      return url.includes('tiktok');
+      return url.includes("tiktok");
     },
     showError: function() {
       this.isLoading = false;
@@ -495,4 +557,3 @@ export default {
   }
 }
 </style>
-
