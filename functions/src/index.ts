@@ -21,7 +21,7 @@ const app = express();
  */
 async function getMetadata(url: string): Promise<any> {
   const randomString = Array.from(
-    { length: 4 },
+    { length: 6 },
     () => Math.random().toString(36)[2]
   ).join("");
 
