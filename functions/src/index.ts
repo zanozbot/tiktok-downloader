@@ -34,6 +34,7 @@ async function getMetadata(url: string): Promise<any> {
   try {
     return await TikTokScraper.getVideoMeta(url, headers);
   } catch (error) {
+    console.log(error);
     return null;
   }
 }
