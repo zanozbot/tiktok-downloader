@@ -142,16 +142,17 @@ module.exports = {
     }
   },
 
+  // Replace values with your own project
   firebase: {
     config: {
-      apiKey: "AIzaSyC6yl_8Acpvr39Dj3-mWuxm0Hm7RuQBdAk",
-      authDomain: "tiktok-video-downloader-free.firebaseapp.com",
-      databaseURL: "https://tiktok-video-downloader-free.firebaseio.com",
-      projectId: "tiktok-video-downloader-free",
-      storageBucket: "tiktok-video-downloader-free.appspot.com",
-      messagingSenderId: "189013497205",
-      appId: "1:189013497205:web:37800f11f50f9853e7ef3c",
-      measurementId: "G-BK6V9Z6K13"
+      apiKey: "FIREBASE_API_KEY",
+      authDomain: "FIREBASE_AUTH_DOMAIN",
+      databaseURL: "FIREBASE_DATABASE_URL",
+      projectId: "FIREBASE_PROJECT_ID",
+      storageBucket: "FIREBASE_STORAGE_BUCKET",
+      messagingSenderId: "FIREBASE_MESSAGING_SENDER_ID",
+      appId: "FIREBASE_APP_ID",
+      measurementId: "FIREBASE_MEASUREMENT_ID"
     },
     services: {
       performance: true,
