@@ -15,6 +15,8 @@ It was designed to be used as an standalone app, so you are not required to inst
 As long as you are online and with a TikTok video link you are all set and ready to download.
 After the video link has been processed, you will be able to download the video as a mp4.
 
+![TikTok Downloader showcase](.images/showcase.gif)
+
 ## Getting started
 
 Navigate to [Firebase Console](https://console.firebase.google.com/) and create a new project.
