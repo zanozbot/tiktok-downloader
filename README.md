@@ -1,4 +1,4 @@
-# TikTok Video Downloader <img src="https://nuxtjs.org/logos/built-with-nuxt.svg" alt="drawing" width="200"/>
+# TikTok Video Downloader
 
 > Download TikTok videos online with TikTok Video Downloader. Completely free.
 
@@ -34,45 +34,68 @@ $ firebase init
 
 Select to use Firebase Functions and Firebase Hosting. Do the same for the emulators. Keep all the defaults export change the public folder to `dist`. Press `n` for all overrides.
 
-## Build and Test
+## Install
 
-### Nuxt
+### Website
 
-```bash
-# install dependencies
-$ npm install
+Run `npm install` to install the website's dependencies.
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+### Firebase Functions
 
-# generate static project
-$ npm run generate
-```
+Navigate to the `functions` folder and run `npm install` to install the functions' dependencies.
+
+## Local development
+
+### Website
+
+Run `npm run dev` navigate to http://localhost:3000/. The app will automatically reload if you change any of the source files.
 
 ### Firebase functions
 
-```bash
-$ cd functions
+Navigate to `functions` folder and run `npm run serve`. This will behind the scenes build the functions and start the Firebase Functions Emulator which will become available on http://localhost:5001/MY_PROJECT/us-central-1, where `MY_PROJECT` is the name of your Firebase project.
 
-# install dependencies
-$ npm install
+**Available functions:**
 
-# build the functions
-$ npm run build
+**GET** http://localhost:5001/MY_PROJECT/us-central-1/app/api/download
 
-# serve at localhost:5001
-$ npm run serve
+- Downloads a TikTok video.
+- Query parameters:
+  - `url` URL of a TikTok video.
+
+**POST** http://localhost:5001/MY_PROJECT/us-central1/videoMetadata
+
+- Retrieves the metadata of a TikTok video.
+- Headers:
+  - `Content-Type` = `application/json`
+- Body:
+
+```json
+{
+  "data": {
+    "url": "TIKTOK_VIDEO_URL"
+  }
+}
 ```
+
+## Build
+
+### Website
+
+Run `npm run generate` to build the website part of the project. The static build artifacts will be stored in the `dist/` directory.
+
+### Firebase Functions
+
+Navigate to `functions` folder and run `npm run build` to build the functions.
 
 ## Deploy
 
-To deploy your application and Firebase Function run the following command:
+To deploy your application together with Firebase Functions run `firebase deploy`.
+To deploy just the functions or the website (hosting) use the `--only` flag.
 
-```bash
-$ firebase deploy
-```
+Examples:
 
-To deploy just the functions or the hosting part use the `--only` flag.
+- `firebase deploy --only functions`
+- `firebase deploy --only hosting`
 
 ## License
 
